@@ -82,6 +82,29 @@ docker-compose logs -f
 docker-compose down
 ```
 
+## Hướng dẫn thao tác thường gặp
+
+### 1. Nạp tài liệu y khoa (Ingest PDF/Word)
+Để hệ thống học thêm kiến thức mới, bạn chỉ cần copy file tài liệu (PDF, Word) dán vào thư mục `data/`. Apache Airflow sẽ tự động quét và chạy luồng nạp dữ liệu (DAG) theo lịch đã thiết lập. Hoặc bạn có thể vào giao diện Airflow Webserver (`http://localhost:8080`) để bấm chạy luồng (Trigger DAG) ngay lập tức.
+
+### 2. Nạp lại một file đã từng nạp (Re-ingest)
+Hệ thống sử dụng cơ chế lưu vết để tránh xử lý trùng lặp. Nếu bạn muốn hệ thống nạp lại một file cũ đã từng xử lý:
+- Hãy xóa file **`data/.ingest_cache.json`**. Lần chạy DAG tiếp theo, hệ thống sẽ tiến hành nạp lại file đó.
+- **Lưu ý về LlamaParse Cache:** Quá trình bóc tách hình ảnh/bảng biểu bằng LlamaParse có bộ nhớ đệm riêng nằm ở thư mục **`data/.llamaparse_cache/`**. Nếu bạn chỉ xóa `.ingest_cache.json` mà **không xóa** `.llamaparse_cache`, hệ thống sẽ nạp lại file nhưng dùng lại kết quả bóc tách cũ (giúp bạn tiết kiệm thời gian và chi phí API). Nếu bạn thực sự muốn bóc tách lại từ con số không, hãy xóa cả dữ liệu trong thư mục `.llamaparse_cache/`.
+
+### 3. Cập nhật code và khởi động lại Docker nhanh
+Mã nguồn trong thư mục `src/` đã được ánh xạ (mount volume) trực tiếp vào trong Docker. 
+- Nếu bạn chỉ sửa logic code Python thông thường, bạn có thể khởi động lại nhanh dịch vụ tương ứng để nhận code mới bằng lệnh:
+  ```bash
+  docker-compose restart backend      # Nếu sửa code backend
+  docker-compose restart frontend     # Nếu sửa code frontend
+  docker-compose restart airflow-scheduler airflow-webserver  # Nếu sửa DAGs của Airflow
+  ```
+- Nếu bạn có cài thêm thư viện mới vào `requirements.txt` hoặc thay đổi cấu trúc `Dockerfile`, bạn bắt buộc phải build lại image bằng lệnh:
+  ```bash
+  docker-compose up -d --build
+  ```
+
 ---
 **Ghi chú quan trọng:** Ngừng hỗ trợ Llama 3.1 8B Instant và sẽ loại bỏ nó vào ngày 16 tháng 8 năm 2026. Sau ngày loại bỏ, các yêu cầu đến mô hình này sẽ không còn được xử lý nữa. 
 
