@@ -17,6 +17,11 @@ qdrant_data/
 postgres_data/
 memgraph_data/
 hf_cache/
+data/*
+!data/uploads/
+!data/processed/
+!data/uploads/.gitkeep
+!data/processed/.gitkeep
 
 # Benchmark
 benchmark/*.json
