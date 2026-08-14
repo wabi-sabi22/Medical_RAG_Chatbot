@@ -30,10 +30,11 @@ medical_rag_project/
 
 ### Chi tiết thư mục `data/`
 Thư mục `data/` là nơi lưu trữ tài liệu gốc và lịch sử nạp dữ liệu (ingestion) của hệ thống:
+- **`uploads/`**: Nơi chứa các sách, phác đồ y khoa (PDF/Word/TXT) chờ xử lý. Bạn cần chép tài liệu mới muốn nạp vào thư mục này.
+- **`processed/`**: Nơi lưu trữ các tài liệu đã nạp xong. Sau khi Airflow xử lý xong tài liệu ở thư mục `uploads/`, tài liệu sẽ được tự động di chuyển sang đây.
 - **`.llamaparse_cache/`**: Thư mục bộ nhớ đệm (cache) lưu tạm kết quả trích xuất từ LlamaParse để tối ưu tốc độ và chi phí gọi API.
 - **`.ingest_cache.json`**: File ghi nhận danh sách tài liệu đã được vector hóa (embedding) thành công để tránh nạp trùng lặp.
 - **Các file `manifest_*.json`**: "Biên bản" nạp dữ liệu tự động sinh ra bởi Apache Airflow, theo dõi lịch sử và trạng thái của các đợt nạp tài liệu tự động (`scheduled`) hoặc thủ công (`manual`).
-- **Tài liệu y khoa (PDF/Word/TXT)**: Nơi chứa trực tiếp các sách, phác đồ y khoa chờ Airflow quét và nạp tự động vào hệ thống cơ sở dữ liệu.
 
 ### Chi tiết thư mục `benchmark/`
 Thư mục này chứa các kịch bản đánh giá (benchmark) hiệu suất mô hình và kết quả báo cáo. Đáng chú ý là 3 bộ dữ liệu câu hỏi (dataset) chuẩn y khoa được đưa vào để kiểm thử:
@@ -85,7 +86,7 @@ docker-compose down
 ## Hướng dẫn thao tác thường gặp
 
 ### 1. Nạp tài liệu y khoa (Ingest PDF/Word)
-Để hệ thống học thêm kiến thức mới, bạn chỉ cần copy file tài liệu (PDF, Word) dán vào thư mục `data/`. Apache Airflow sẽ tự động quét và chạy luồng nạp dữ liệu (DAG) theo lịch đã thiết lập. Hoặc bạn có thể vào giao diện Airflow Webserver (`http://localhost:8080`) để bấm chạy luồng (Trigger DAG) ngay lập tức.
+Để hệ thống học thêm kiến thức mới, bạn chỉ cần copy file tài liệu (PDF, Word/TXT) dán vào thư mục **`data/uploads/`**. Apache Airflow sẽ tự động quét và chạy luồng nạp dữ liệu (DAG) theo lịch đã thiết lập. Khi xử lý thành công, file tài liệu sẽ tự động được di chuyển sang thư mục **`data/processed/`**. Bạn cũng có thể vào giao diện Airflow Webserver (`http://localhost:8080`) để bấm chạy luồng (Trigger DAG) ngay lập tức.
 
 ### 2. Nạp lại một file đã từng nạp (Re-ingest)
 Hệ thống sử dụng cơ chế lưu vết để tránh xử lý trùng lặp. Nếu bạn muốn hệ thống nạp lại một file cũ đã từng xử lý:
