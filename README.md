@@ -11,15 +11,21 @@ Medical RAG Chatbot là một hệ thống hỏi đáp y tế tự động áp d
 ## Cấu trúc thư mục
 ```
 medical_rag_project/
-├── benchmark/        # Chứa mã nguồn và báo cáo đánh giá (đã loại trừ các file dữ liệu test JSON)
-├── dags/             # Các DAG của Apache Airflow quản lý luồng công việc
-├── data/             # Thư mục chứa dữ liệu đầu vào
-├── src/              # Mã nguồn chính của dự án (backend, cấu hình, xử lý RAG)
-├── docker-compose.yml# File cấu hình triển khai hệ thống bằng Docker
-├── Dockerfile        # File build image cho các dịch vụ
-├── requirements.txt  # Danh sách thư viện Python
-├── run_backend.py    # Script khởi chạy API Backend
-└── run_frontend.py   # Script khởi chạy giao diện Chatbot (Frontend)
+├── benchmark/        # Chứa kịch bản đánh giá hiệu suất mô hình và kết quả báo cáo
+├── dags/             # Chứa luồng công việc (DAGs) của Apache Airflow để nạp và xử lý dữ liệu
+├── data/             # Lưu trữ tài liệu y khoa đầu vào (PDF/Word) và các tệp kết quả
+├── src/              # Thư mục chứa mã nguồn chính của toàn bộ hệ thống
+│   ├── api/          # Các endpoint FastAPI xử lý yêu cầu phía backend
+│   ├── core/         # Logic cốt lõi (LangGraph workflow, Embedding, Qdrant/Memgraph, LlamaParse)
+│   ├── ui/           # Mã nguồn giao diện người dùng (Gradio UI)
+│   ├── config.py     # Nạp và quản lý các biến môi trường cấu hình hệ thống
+│   └── database.py   # Module khởi tạo và quản lý kết nối cơ sở dữ liệu
+├── .env.sample       # File mẫu chứa các biến cấu hình dự án để người dùng tham khảo
+├── docker-compose.yml# File cấu hình triển khai toàn bộ hệ thống bằng Docker
+├── Dockerfile        # File build image Docker cho các dịch vụ
+├── requirements.txt  # Danh sách tất cả thư viện Python cần cài đặt
+├── run_backend.py    # Script khởi chạy API Backend (chạy trên port 8000)
+└── run_frontend.py   # Script khởi chạy giao diện Chatbot UI (chạy trên port 7860)
 ```
 
 ## Hướng dẫn cài đặt và sử dụng (bằng Docker)
