@@ -28,9 +28,16 @@ Dự án này được đóng gói hoàn toàn bằng Docker, giúp việc tri�
 
 ### 1. Yêu cầu hệ thống
 - Đã cài đặt **Docker** và **Docker Compose**.
-- Đảm bảo bạn có sẵn file `.env` tại thư mục gốc với các khóa API cần thiết (ví dụ: `GROQ_API_KEY`, `LLAMA_CLOUD_API_KEY`...).
 
-### 2. Khởi chạy hệ thống
+### 2. Thiết lập biến môi trường (.env)
+Dự án yêu cầu một số API Key để hoạt động. Bạn hãy copy file `.env.sample` đổi tên thành `.env` và điền các khóa bảo mật sau:
+- **HF_TOKEN (Hugging Face Token):** Đăng nhập vào [Hugging Face](https://huggingface.co/), truy cập mục *Settings > Access Tokens* và tạo một token mới (quyền Read).
+- **GROQ_API_KEY:** Tạo khóa API tại [Groq Console](https://console.groq.com/keys).
+- **LLAMA_CLOUD_API_KEY:** Tạo khóa API tại [LlamaCloud](https://cloud.llamaindex.ai/).
+
+*(Qdrant DB và Memgraph đã được cấu hình chạy nội bộ trong Docker nên không cần thiết lập API Key)*
+
+### 3. Khởi chạy hệ thống
 Mở terminal tại thư mục gốc của dự án (`medical_rag_project`) và chạy lệnh sau để tải, build và khởi động toàn bộ các dịch vụ:
 
 ```bash
@@ -44,13 +51,13 @@ Sau khi quá trình khởi động hoàn tất, bạn có thể truy cập các 
 - **Qdrant (Vector DB):** `localhost:6333`
 - **Memgraph-lab:** [http://localhost:3000](http://localhost:3000)
 
-### 3. Theo dõi log và kiểm tra
+### 4. Theo dõi log và kiểm tra
 Để xem log của các dịch vụ đang chạy ngầm, sử dụng lệnh:
 ```bash
 docker-compose logs -f
 ```
 
-### 4. Dừng hệ thống
+### 5. Dừng hệ thống
 Để dừng và tắt toàn bộ các container của hệ thống, chạy lệnh sau:
 ```bash
 docker-compose down
