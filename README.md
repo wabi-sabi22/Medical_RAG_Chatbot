@@ -86,7 +86,7 @@ docker-compose down
 ## Hướng dẫn thao tác thường gặp
 
 ### 1. Nạp tài liệu y khoa (Ingest PDF/Word)
-Để hệ thống học thêm kiến thức mới, bạn chỉ cần copy file tài liệu (PDF, Word/TXT) dán vào thư mục **`data/uploads/`**. Apache Airflow sẽ tự động quét và chạy luồng nạp dữ liệu (DAG) theo lịch đã thiết lập. Khi xử lý thành công, file tài liệu sẽ tự động được di chuyển sang thư mục **`data/processed/`**. Bạn cũng có thể vào giao diện Airflow Webserver (`http://localhost:8080`) để bấm chạy luồng (Trigger DAG) ngay lập tức.
+Để hệ thống học thêm kiến thức mới, bạn chỉ cần copy file tài liệu (PDF, Word/TXT) dán vào thư mục **`data/uploads/`**. Apache Airflow sẽ tự động quét và chạy luồng nạp dữ liệu (DAG) theo lịch đã thiết lập. Khi xử lý thành công, file tài liệu sẽ tự động được di chuyển sang thư mục **`data/processed/`**. Bạn cũng có thể vào giao diện Airflow Webserver (`http://localhost:8080`) để bấm chạy luồng (Trigger DAG) để nạp ngay lập tức.
 
 ### 2. Nạp lại một file đã từng nạp (Re-ingest)
 Hệ thống sử dụng cơ chế lưu vết để tránh xử lý trùng lặp. Nếu bạn muốn hệ thống nạp lại một file cũ đã từng xử lý:
