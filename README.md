@@ -35,6 +35,12 @@ Thư mục `data/` là nơi lưu trữ tài liệu gốc và lịch sử nạp d
 - **Các file `manifest_*.json`**: "Biên bản" nạp dữ liệu tự động sinh ra bởi Apache Airflow, theo dõi lịch sử và trạng thái của các đợt nạp tài liệu tự động (`scheduled`) hoặc thủ công (`manual`).
 - **Tài liệu y khoa (PDF/Word/TXT)**: Nơi chứa trực tiếp các sách, phác đồ y khoa chờ Airflow quét và nạp tự động vào hệ thống cơ sở dữ liệu.
 
+### Chi tiết thư mục `benchmark/`
+Thư mục này chứa các kịch bản đánh giá (benchmark) hiệu suất mô hình và kết quả báo cáo. Đáng chú ý là 3 bộ dữ liệu câu hỏi (dataset) chuẩn y khoa được đưa vào để kiểm thử:
+- **`ESC_Hypertension_Guidelines_2024_100_(2).json`**: Bộ 100 câu hỏi đánh giá dựa trên Phác đồ điều trị Tăng huyết áp của Hiệp hội Tim mạch Châu Âu (ESC) năm 2024.
+- **`Hướng_dẫn_Tăng_HA_BYT_2023_89_(2).json`**: Bộ 89 câu hỏi đánh giá dựa trên Hướng dẫn chẩn đoán và điều trị Tăng huyết áp của Bộ Y tế Việt Nam ban hành năm 2023.
+- **`VNHA_Điều_trị_Tăng_Huyết_Áp_2024_90(2).json`**: Bộ 90 câu hỏi đánh giá dựa trên Hướng dẫn chẩn đoán và điều trị Tăng huyết áp của Phân hội Tăng huyết áp Việt Nam (VNHA) năm 2024.
+
 ## Hướng dẫn cài đặt và sử dụng (bằng Docker)
 
 Dự án này được đóng gói hoàn toàn bằng Docker, giúp việc triển khai trở nên đồng bộ và dễ dàng.

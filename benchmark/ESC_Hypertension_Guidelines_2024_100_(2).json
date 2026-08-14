@@ -1,0 +1,1158 @@
+[
+  {
+    "id": "1",
+    "category": "medical_query",
+    "question": "Why did the 2024 ESC Guidelines change the document title from 'arterial hypertension' to 'management of elevated blood pressure and hypertension'?",
+    "expected_keywords": [
+      "continuous scale",
+      "thang đo liên tục",
+      "below traditional",
+      "dưới ngưỡng",
+      "arterial"
+    ],
+    "gold_standard": "EN: Because CVD risk is on a continuous scale and lowering BP benefits high-risk individuals even below traditional thresholds. 'Arterial' was dropped to avoid confusion with pulmonary hypertension.\nVN: Vì nguy cơ tim mạch diễn ra trên thang đo liên tục và hạ huyết áp có lợi cho người nguy cơ cao dù dưới ngưỡng truyền thống. Từ 'arterial' bị bỏ để tránh nhầm với tăng áp phổi."
+  },
+  {
+    "id": "2",
+    "category": "medical_query",
+    "question": "What is the office blood pressure threshold for defining hypertension in the 2024 ESC Guidelines?",
+    "expected_keywords": [
+      ">= 140",
+      ">= 90",
+      "office",
+      "phòng khám"
+    ],
+    "gold_standard": "EN: Office Systolic Blood Pressure (SBP) >= 140 mmHg and/or Diastolic Blood Pressure (DBP) >= 90 mmHg.\nVN: Huyết áp tâm thu (SBP) đo tại phòng khám >= 140 mmHg và/hoặc huyết áp tâm trương (DBP) >= 90 mmHg."
+  },
+  {
+    "id": "3",
+    "category": "medical_query",
+    "question": "How is the new blood pressure category 'Elevated BP' defined in the 2024 ESC Guidelines?",
+    "expected_keywords": [
+      "120-139",
+      "70-89",
+      "Elevated BP",
+      "Huyết áp tăng"
+    ],
+    "gold_standard": "EN: Office SBP of 120-139 mmHg and/or DBP of 70-89 mmHg.\nVN: Huyết áp tâm thu phòng khám từ 120-139 mmHg và/hoặc tâm trương từ 70-89 mmHg."
+  },
+  {
+    "id": "4",
+    "category": "medical_query",
+    "question": "What is the recommended target systolic blood pressure range for most non-frail adults receiving blood pressure-lowering medication?",
+    "expected_keywords": [
+      "120-129",
+      "systolic",
+      "tâm thu"
+    ],
+    "gold_standard": "EN: SBP target of 120-129 mmHg, provided treatment is well tolerated.\nVN: Mục tiêu SBP là 120-129 mmHg, với điều kiện điều trị được dung nạp tốt."
+  },
+  {
+    "id": "5",
+    "category": "medical_query",
+    "question": "In which patient populations can a more lenient SBP target (e.g., < 140 mmHg or ALARA principle) be considered instead of 120-129 mmHg?",
+    "expected_keywords": [
+      "orthostatic hypotension",
+      "hạ huyết áp tư thế",
+      ">= 85",
+      "frailty",
+      "suy yếu"
+    ],
+    "gold_standard": "EN: Patients with pre-treatment symptomatic orthostatic hypotension, age >= 85 years, moderate-to-severe frailty, or limited predicted lifespan (< 3 years).\nVN: Bệnh nhân bị hạ huyết áp tư thế có triệu chứng trước điều trị, người >= 85 tuổi, suy yếu từ trung bình đến nặng, hoặc tuổi thọ dự kiến hạn chế (< 3 năm)."
+  },
+  {
+    "id": "6",
+    "category": "medical_query",
+    "question": "What is the recommended upper limit of pure alcohol consumption per week in the ESC 2024 Guidelines?",
+    "expected_keywords": [
+      "100g",
+      "100 g"
+    ],
+    "gold_standard": "EN: Less than 100 g/week of pure alcohol.\nVN: Dưới 100 g/tuần cồn nguyên chất."
+  },
+  {
+    "id": "7",
+    "category": "medical_query",
+    "question": "How many minutes per week of moderate intensity aerobic exercise is recommended to reduce BP and CVD risk?",
+    "expected_keywords": [
+      "150",
+      "minutes",
+      "phút"
+    ],
+    "gold_standard": "EN: >= 150 minutes/week of moderate intensity aerobic exercise.\nVN: >= 150 phút/tuần bài tập aerobic cường độ trung bình."
+  },
+  {
+    "id": "8",
+    "category": "medical_query",
+    "question": "What is the preferred method for confirming a diagnosis of hypertension according to the guidelines?",
+    "expected_keywords": [
+      "Out-of-office",
+      "ngoài phòng khám",
+      "ABPM",
+      "HBPM"
+    ],
+    "gold_standard": "EN: Out-of-office blood pressure measurement using Ambulatory Blood Pressure Monitoring (ABPM) and/or Home Blood Pressure Monitoring (HBPM).\nVN: Đo huyết áp ngoài phòng khám bằng đo huyết áp lưu động (ABPM) và/hoặc đo huyết áp tại nhà (HBPM)."
+  },
+  {
+    "id": "9",
+    "category": "medical_query",
+    "question": "What is the recommended maximum percentage of energy intake from free sugar consumption?",
+    "expected_keywords": [
+      "10%",
+      "10 phần trăm",
+      "energy"
+    ],
+    "gold_standard": "EN: A maximum of 10% of energy intake.\nVN: Tối đa 10% lượng năng lượng nạp vào."
+  },
+  {
+    "id": "10",
+    "category": "medical_query",
+    "question": "Is it recommended to combine two RAS blockers, such as an ACE inhibitor and an ARB, to treat hypertension?",
+    "expected_keywords": [
+      "not recommended",
+      "không khuyến cáo",
+      "không nên"
+    ],
+    "gold_standard": "EN: Combining two RAS blockers is not recommended.\nVN: Việc kết hợp hai thuốc ức chế hệ RAS là không được khuyến cáo."
+  },
+  {
+    "id": "11",
+    "category": "medical_query",
+    "question": "Which risk prediction model is recommended to estimate 10-year CVD risk in individuals aged 40-69 years with elevated BP?",
+    "expected_keywords": [
+      "SCORE2"
+    ],
+    "gold_standard": "EN: SCORE2.\nVN: Thang điểm SCORE2."
+  },
+  {
+    "id": "12",
+    "category": "medical_query",
+    "question": "Which risk prediction model is recommended to estimate 10-year CVD risk in individuals aged >= 70 years with elevated BP?",
+    "expected_keywords": [
+      "SCORE2-OP",
+      "Older Persons"
+    ],
+    "gold_standard": "EN: SCORE2-OP (Systematic Coronary Risk Evaluation 2 - Older Persons).\nVN: Thang điểm SCORE2-OP."
+  },
+  {
+    "id": "13",
+    "category": "medical_query",
+    "question": "What 10-year CVD risk threshold on SCORE2 or SCORE2-OP mandates considering an individual with elevated BP at increased risk for treatment purposes?",
+    "expected_keywords": [
+      ">= 10%"
+    ],
+    "gold_standard": "EN: 10-year CVD risk >= 10%.\nVN: Nguy cơ tim mạch 10 năm >= 10%."
+  },
+  {
+    "id": "14",
+    "category": "medical_query",
+    "question": "What is the recommended daily restriction of sodium in grams per day according to the ESC 2024 guidelines?",
+    "expected_keywords": [
+      "2g",
+      "2 g"
+    ],
+    "gold_standard": "EN: Restriction of sodium to approximately 2 g per day.\nVN: Giới hạn lượng natri ở mức khoảng 2 g mỗi ngày."
+  },
+  {
+    "id": "15",
+    "category": "medical_query",
+    "question": "What sex-specific pregnancy complications are recognized as CVD risk modifiers in women with elevated BP?",
+    "expected_keywords": [
+      "Gestational diabetes",
+      "pre-eclampsia",
+      "đái tháo đường thai kỳ",
+      "tiền sản giật",
+      "sinh non"
+    ],
+    "gold_standard": "EN: Gestational diabetes, gestational hypertension, pre-eclampsia, pre-term delivery, stillbirths, and recurrent miscarriage.\nVN: Đái tháo đường thai kỳ, tăng huyết áp thai kỳ, tiền sản giật, sinh non, thai chết lưu, và sảy thai liên tiếp."
+  },
+  {
+    "id": "16",
+    "category": "medical_query",
+    "question": "Mention non-traditional CVD risk modifiers shared by both sexes that can reclassify borderline risk patients to higher risk.",
+    "expected_keywords": [
+      "ethnicity",
+      "autoimmune",
+      "chủng tộc",
+      "viêm tự miễn",
+      "HIV"
+    ],
+    "gold_standard": "EN: High-risk ethnicity, family history of premature ASCVD, socio-economic deprivation, autoimmune inflammatory disorders, HIV, or severe mental illness.\nVN: Chủng tộc nguy cơ cao, tiền sử gia đình mắc bệnh tim mạch sớm, điều kiện kinh tế xã hội khó khăn, rối loạn viêm tự miễn, HIV, hoặc bệnh tâm thần nặng."
+  },
+  {
+    "id": "17",
+    "category": "medical_query",
+    "question": "What is the minimum percentage of usable BP recordings required for a valid Ambulatory Blood Pressure Measurement (ABPM) session?",
+    "expected_keywords": [
+      "70%"
+    ],
+    "gold_standard": "EN: A minimum of 70% usable BP recordings is required.\nVN: Yêu cầu tối thiểu 70% bản ghi huyết áp có thể sử dụng được."
+  },
+  {
+    "id": "18",
+    "category": "medical_query",
+    "question": "What is the recommended screening interval for blood pressure in healthy adults aged under 40 years?",
+    "expected_keywords": [
+      "3 years",
+      "3 năm"
+    ],
+    "gold_standard": "EN: At least every 3 years.\nVN: Ít nhất 3 năm một lần."
+  },
+  {
+    "id": "19",
+    "category": "medical_query",
+    "question": "What is the target systolic blood pressure range for persons with diabetes receiving BP-lowering drugs?",
+    "expected_keywords": [
+      "120-129"
+    ],
+    "gold_standard": "EN: Target systolic BP to 120-129 mmHg.\nVN: Mục tiêu huyết áp tâm thu từ 120-129 mmHg."
+  },
+  {
+    "id": "20",
+    "category": "medical_query",
+    "question": "What is the diagnostic protocol when screening office blood pressure is 140-159 / 90-99 mmHg?",
+    "expected_keywords": [
+      "out-of-office",
+      "ABPM",
+      "HBPM",
+      "ngoài phòng khám"
+    ],
+    "gold_standard": "EN: Confirm diagnosis with out-of-office BP measurement (ABPM or HBPM). If not feasible, perform repeated office visits.\nVN: Xác nhận chẩn đoán bằng đo huyết áp ngoài phòng khám (ABPM hoặc HBPM). Nếu không khả thi, tiến hành đo lại tại phòng khám qua nhiều lần khám."
+  },
+  {
+    "id": "21",
+    "category": "medical_query",
+    "question": "Which common cardiac test is routinely recommended for all patients with hypertension to detect left ventricular hypertrophy?",
+    "expected_keywords": [
+      "12-lead ECG",
+      "điện tâm đồ",
+      "ECG"
+    ],
+    "gold_standard": "EN: A 12-lead ECG is recommended for all patients with hypertension.\nVN: Điện tâm đồ (ECG) 12 chuyển đạo được khuyến cáo cho tất cả bệnh nhân tăng huyết áp."
+  },
+  {
+    "id": "22",
+    "category": "medical_query",
+    "question": "How can drug adherence be objectively evaluated during the work-up for apparent resistant hypertension?",
+    "expected_keywords": [
+      "DOT",
+      "urine",
+      "blood",
+      "máu",
+      "nước tiểu",
+      "quan sát trực tiếp"
+    ],
+    "gold_standard": "EN: Through directly observed treatment (DOT) or by detecting prescribed drug metabolites in blood or urine samples.\nVN: Thông qua quan sát trực tiếp việc uống thuốc (DOT) hoặc xét nghiệm tìm chất chuyển hóa của thuốc trong máu/nước tiểu."
+  },
+  {
+    "id": "23",
+    "category": "medical_query",
+    "question": "Which two drug classes are specifically recommended for patients with a history of myocardial infarction requiring BP-lowering treatment?",
+    "expected_keywords": [
+      "beta-blockers",
+      "RAS"
+    ],
+    "gold_standard": "EN: Beta-blockers and RAS blockers are recommended.\nVN: Thuốc chẹn beta và thuốc ức chế hệ RAS được khuyến cáo."
+  },
+  {
+    "id": "24",
+    "category": "medical_query",
+    "question": "In which subgroup of hypertensive patients is screening for primary aldosteronism recommended?",
+    "expected_keywords": [
+      "All adults",
+      "confirmed",
+      "tất cả",
+      "xác định",
+      "ARR"
+    ],
+    "gold_standard": "EN: All adults with confirmed hypertension (office BP >= 140/90 mmHg), tested via aldosterone and renin measurements (ARR).\nVN: Tất cả người trưởng thành đã được xác định mắc tăng huyết áp (>= 140/90 mmHg), thông qua xét nghiệm tỷ lệ aldosterone/renin (ARR)."
+  },
+  {
+    "id": "25",
+    "category": "medical_query",
+    "question": "What is the guideline recommendation regarding dietary free sugar and sugar-sweetened beverages intake?",
+    "expected_keywords": [
+      "10%",
+      "đường tự do",
+      "free sugar",
+      "năng lượng"
+    ],
+    "gold_standard": "EN: Restrict free sugar consumption to a maximum of 10% of total energy intake, and discourage consumption of sugar-sweetened beverages.\nVN: Hạn chế đường tự do tối đa 10% tổng năng lượng nạp vào, và không khuyến khích đồ uống có đường."
+  },
+  {
+    "id": "26",
+    "category": "medical_query",
+    "question": "What is the recommended intervention for dietary sodium and potassium intake in non-CKD hypertensive patients with high sodium intake?",
+    "expected_keywords": [
+      "potassium-enriched",
+      "0.5-1.0",
+      "kali",
+      "muối thay thế"
+    ],
+    "gold_standard": "EN: Restrict sodium and increase potassium intake by 0.5-1.0 g/day, such as by using potassium-enriched salt substitutes.\nVN: Giảm muối natri và tăng kali 0,5-1,0 g/ngày, ví dụ như dùng muối thay thế giàu kali."
+  },
+  {
+    "id": "27",
+    "category": "medical_query",
+    "question": "What eGFR threshold value indicates moderate-to-severe Chronic Kidney Disease (CKD) according to the high-risk criteria in the guidelines?",
+    "expected_keywords": [
+      "<60",
+      "< 60"
+    ],
+    "gold_standard": "EN: eGFR < 60 mL/min/1.73 m2.\nVN: eGFR < 60 mL/min/1.73 m2."
+  },
+  {
+    "id": "28",
+    "category": "medical_query",
+    "question": "What is the recommended weekly duration and type of physical activity for blood pressure reduction?",
+    "expected_keywords": [
+      "150 minutes",
+      "aerobic",
+      "resistance",
+      "kháng lực"
+    ],
+    "gold_standard": "EN: >= 150 minutes/week of moderate-intensity aerobic exercise, complemented with resistance training 2-3 times/week.\nVN: Ít nhất 150 phút/tuần bài tập aerobic cường độ trung bình, kết hợp rèn luyện sức bền (kháng lực) 2-3 lần/tuần."
+  },
+  {
+    "id": "29",
+    "category": "medical_query",
+    "question": "What are the target Body Mass Index (BMI) and waist circumference values recommended to reduce BP and CVD risk?",
+    "expected_keywords": [
+      "20-25",
+      "< 94",
+      "< 80",
+      "vòng eo"
+    ],
+    "gold_standard": "EN: BMI 20-25 kg/m2; waist circumference < 94 cm for men and < 80 cm for women.\nVN: BMI từ 20-25 kg/m2; vòng eo < 94 cm đối với nam và < 80 cm đối với nữ."
+  },
+  {
+    "id": "30",
+    "category": "medical_query",
+    "question": "Which healthy dietary patterns are specifically recommended to lower blood pressure and CVD risk?",
+    "expected_keywords": [
+      "Mediterranean",
+      "DASH",
+      "Địa Trung Hải"
+    ],
+    "gold_standard": "EN: The Mediterranean diet and the DASH diet.\nVN: Chế độ ăn Địa Trung Hải và chế độ ăn DASH."
+  },
+  {
+    "id": "31",
+    "category": "medical_query",
+    "question": "What is the guideline recommendation regarding the optimal time of day for taking blood pressure-lowering medications?",
+    "expected_keywords": [
+      "convenient",
+      "thuận tiện",
+      "habitual",
+      "thói quen"
+    ],
+    "gold_standard": "EN: Take medications at the most convenient time of day for the patient to establish a habitual daily pattern and maximize adherence.\nVN: Uống thuốc vào thời điểm thuận tiện nhất trong ngày cho bệnh nhân để tạo thói quen và duy trì tuân thủ điều trị."
+  },
+  {
+    "id": "32",
+    "category": "medical_query",
+    "question": "What is the management strategy for adults with Elevated BP (120-139/70-89 mmHg) and low/medium 10-year CVD risk (<10%)?",
+    "expected_keywords": [
+      "Lifestyle",
+      "thay đổi lối sống",
+      "not routinely",
+      "không dùng thuốc"
+    ],
+    "gold_standard": "EN: Lifestyle measures alone are recommended; pharmacological treatment is not routinely recommended.\nVN: Chỉ khuyến cáo áp dụng các biện pháp thay đổi lối sống; không khuyến cáo dùng thuốc thường quy."
+  },
+  {
+    "id": "33",
+    "category": "medical_query",
+    "question": "Which drug class is recommended to be combined with a CCB for Black patients from Sub-Saharan Africa?",
+    "expected_keywords": [
+      "thiazide",
+      "RAS",
+      "lợi tiểu"
+    ],
+    "gold_standard": "EN: Combination therapy including a CCB combined with either a thiazide diuretic or a RAS blocker.\nVN: Liệu pháp phối hợp bao gồm thuốc chẹn kênh canxi (CCB) kết hợp với thuốc lợi tiểu thiazide hoặc thuốc ức chế hệ RAS."
+  },
+  {
+    "id": "34",
+    "category": "medical_query",
+    "question": "What is the treatment of choice for fibromuscular dysplasia causing renovascular hypertension?",
+    "expected_keywords": [
+      "angioplasty without stenting",
+      "nong mạch không đặt stent",
+      "PTRA"
+    ],
+    "gold_standard": "EN: Renal artery angioplasty without stenting.\nVN: Nong động mạch thận không đặt stent (PTRA)."
+  },
+  {
+    "id": "35",
+    "category": "medical_query",
+    "question": "What is the recommended duration of antihypertensive drug treatment once initiated?",
+    "expected_keywords": [
+      "lifelong",
+      "suốt đời",
+      "85"
+    ],
+    "gold_standard": "EN: Maintain blood pressure-lowering drug treatment lifelong, even beyond 85 years of age if well tolerated.\nVN: Duy trì điều trị thuốc hạ huyết áp suốt đời, ngay cả trên 85 tuổi nếu thuốc vẫn được dung nạp tốt."
+  },
+  {
+    "id": "36",
+    "category": "medical_query",
+    "question": "What are the four main first-line drug classes recommended for pharmacological treatment of hypertension?",
+    "expected_keywords": [
+      "ACEi",
+      "ARB",
+      "CCB",
+      "thiazide",
+      "ức chế men chuyển",
+      "chẹn kênh calci",
+      "lợi tiểu"
+    ],
+    "gold_standard": "EN: ACE inhibitors, Angiotensin Receptor Blockers (ARBs), dihydropyridine Calcium Channel Blockers (CCBs), and thiazide/thiazide-like diuretics.\nVN: Ức chế men chuyển (ACEi), Ức chế thụ thể (ARB), Chẹn kênh calci nhóm dihydropyridine (CCB), và Lợi tiểu thiazide/giống thiazide."
+  },
+  {
+    "id": "37",
+    "category": "medical_query",
+    "question": "Which drug is recommended as the first-line add-on therapy when blood pressure is uncontrolled on a triple combination regimen (resistant hypertension)?",
+    "expected_keywords": [
+      "Spironolactone"
+    ],
+    "gold_standard": "EN: Spironolactone.\nVN: Spironolactone."
+  },
+  {
+    "id": "38",
+    "category": "medical_query",
+    "question": "What pharmacotherapy options should be considered if spironolactone is not tolerated or ineffective in resistant hypertension?",
+    "expected_keywords": [
+      "Eplerenone",
+      "beta-blocker",
+      "chẹn beta",
+      "alpha-blocker"
+    ],
+    "gold_standard": "EN: Eplerenone, a beta-blocker, a centrally acting agent, an alpha-blocker, hydralazine, or a potassium-sparing diuretic.\nVN: Eplerenone, thuốc chẹn beta, thuốc tác động trung ương, thuốc chẹn alpha, hydralazine, hoặc thuốc lợi tiểu giữ kali."
+  },
+  {
+    "id": "39",
+    "category": "medical_query",
+    "question": "What are the clinical indications for considering catheter-based renal denervation (RDN) in hypertension?",
+    "expected_keywords": [
+      "uncontrolled",
+      "3 drugs",
+      "không kiểm soát",
+      "đốt thần kinh thận"
+    ],
+    "gold_standard": "EN: RDN may be considered for patients with uncontrolled resistant hypertension on 3 drugs (including a diuretic), OR high CVD risk with uncontrolled HTN on <3 drugs, provided the patient expresses preference.\nVN: Triệt đốt thần kinh thận (RDN) có thể xem xét cho bệnh nhân THA kháng trị không kiểm soát (đang dùng 3 thuốc), HOẶC nguy cơ tim mạch cao không kiểm soát với <3 thuốc, nếu bệnh nhân mong muốn."
+  },
+  {
+    "id": "40",
+    "category": "medical_query",
+    "question": "In which patient conditions is renal denervation explicitly NOT recommended?",
+    "expected_keywords": [
+      "first-line",
+      "eGFR < 40",
+      "secondary",
+      "suy thận",
+      "thứ phát",
+      "bước 1"
+    ],
+    "gold_standard": "EN: NOT recommended as a first-line treatment, NOR in patients with moderately to severely impaired renal function (eGFR < 40), NOR in secondary hypertension.\nVN: KHÔNG khuyến cáo làm điều trị bước 1, KHÔNG dùng cho bệnh nhân suy thận trung bình-nặng (eGFR < 40), và KHÔNG dùng cho tăng huyết áp thứ phát."
+  },
+  {
+    "id": "41",
+    "category": "medical_query",
+    "question": "What minimum drop in systolic blood pressure (SBP) after standing indicates orthostatic hypotension?",
+    "expected_keywords": [
+      ">= 20",
+      "20 mmHg"
+    ],
+    "gold_standard": "EN: A drop in SBP of >= 20 mmHg.\nVN: SBP giảm >= 20 mmHg."
+  },
+  {
+    "id": "42",
+    "category": "medical_query",
+    "question": "Why is screening for Hypertension-Mediated Organ Damage (HMOD) useful in young adults (< 40 years) with elevated BP?",
+    "expected_keywords": [
+      "SCORE2",
+      "not validated",
+      "chưa kiểm định",
+      "identify",
+      "xác định"
+    ],
+    "gold_standard": "EN: SCORE2 is not validated for adults < 40 years; detecting HMOD helps identify young individuals at higher risk who may benefit from medical therapy.\nVN: SCORE2 chưa được kiểm định cho người < 40 tuổi; phát hiện HMOD giúp xác định người trẻ nguy cơ cao cần cân nhắc điều trị thuốc."
+  },
+  {
+    "id": "43",
+    "category": "medical_query",
+    "question": "What is the blood pressure threshold for initiating drug treatment in pregnant women with chronic or gestational hypertension?",
+    "expected_keywords": [
+      ">= 140",
+      ">= 90",
+      "thai kỳ",
+      "pregnancy"
+    ],
+    "gold_standard": "EN: Confirmed SBP >= 140 mmHg or DBP >= 90 mmHg.\nVN: Huyết áp phòng khám xác nhận SBP >= 140 mmHg hoặc DBP >= 90 mmHg."
+  },
+  {
+    "id": "44",
+    "category": "medical_query",
+    "question": "What blood pressure values signify a hypertensive emergency in pregnancy requiring immediate hospital admission?",
+    "expected_keywords": [
+      ">= 160",
+      ">= 110",
+      "emergency",
+      "cấp cứu"
+    ],
+    "gold_standard": "EN: SBP >= 160 mmHg or DBP >= 110 mmHg.\nVN: SBP >= 160 mmHg hoặc DBP >= 110 mmHg."
+  },
+  {
+    "id": "45",
+    "category": "medical_query",
+    "question": "What are the recommended first-line antihypertensive medications for managing severe hypertension in pregnancy?",
+    "expected_keywords": [
+      "labetalol",
+      "methyldopa",
+      "nifedipine"
+    ],
+    "gold_standard": "EN: Intravenous labetalol, oral methyldopa, or oral nifedipine.\nVN: Labetalol tĩnh mạch, Methyldopa uống, hoặc Nifedipine uống."
+  },
+  {
+    "id": "46",
+    "category": "medical_query",
+    "question": "What role do SGLT2 inhibitors play in patients with hypertension according to the 2024 ESC Guidelines?",
+    "expected_keywords": [
+      "CKD",
+      "Heart Failure",
+      "suy tim",
+      "bệnh thận mạn",
+      "SGLT2"
+    ],
+    "gold_standard": "EN: SGLT2 inhibitors are recommended in patients with CKD and Heart Failure to improve cardiovascular outcomes and provide modest BP reduction.\nVN: Thuốc ức chế SGLT2 được khuyến cáo ở bệnh nhân bệnh thận mạn và suy tim nhằm cải thiện biến cố tim mạch và hạ nhẹ huyết áp."
+  },
+  {
+    "id": "47",
+    "category": "medical_query",
+    "question": "What combination of disease-modifying drug classes is recommended for patients with symptomatic Heart Failure with reduced Ejection Fraction (HFrEF) and hypertension?",
+    "expected_keywords": [
+      "ACE",
+      "ARB",
+      "Beta-blocker",
+      "MRA",
+      "SGLT2"
+    ],
+    "gold_standard": "EN: ACE inhibitors (or ARB / ARNI), Beta-blockers, MRAs, and SGLT2 inhibitors.\nVN: Ức chế men chuyển (hoặc ARB / ARNI), Chẹn beta, MRA, và ức chế SGLT2."
+  },
+  {
+    "id": "48",
+    "category": "medical_query",
+    "question": "What is the target systolic blood pressure in patients with a history of stroke or Transient Ischemic Attack (TIA) once BP lowering is initiated?",
+    "expected_keywords": [
+      "120-129",
+      "stroke",
+      "đột quỵ"
+    ],
+    "gold_standard": "EN: Target SBP of 120-129 mmHg, provided treatment is well tolerated.\nVN: Mục tiêu SBP 120-129 mmHg, miễn là điều trị dung nạp tốt."
+  },
+  {
+    "id": "49",
+    "category": "medical_query",
+    "question": "What is the acute blood pressure management guideline for patients presenting with Acute Intracerebral Hemorrhage (ICH)?",
+    "expected_keywords": [
+      "140-160",
+      "NOT recommended",
+      "KHÔNG khuyến cáo",
+      "> 70"
+    ],
+    "gold_standard": "EN: Immediate SBP lowering within 6 hours to 140-160 mmHg is recommended. If initial SBP > 220 mmHg, acute reduction of > 70 mmHg within 1 hour is NOT recommended.\nVN: Hạ SBP cấp trong vòng 6 giờ về 140-160 mmHg. Đối với SBP ban đầu > 220 mmHg, KHÔNG khuyến cáo hạ giảm quá 70 mmHg trong giờ đầu tiên."
+  },
+  {
+    "id": "50",
+    "category": "medical_query",
+    "question": "What drug combination strategy is recommended for Black patients from Sub-Saharan Africa who require blood pressure-lowering treatment?",
+    "expected_keywords": [
+      "CCB",
+      "thiazide",
+      "RAS",
+      "chẹn kênh calci",
+      "lợi tiểu"
+    ],
+    "gold_standard": "EN: Combination therapy containing a Calcium Channel Blocker (CCB) combined with either a thiazide diuretic or a Renin-Angiotensin System (RAS) blocker.\nVN: Phối hợp thuốc gồm Chẹn kênh calci (CCB) kết hợp với lợi tiểu thiazide HOẶC Thuốc ức chế hệ RAS (ACEi/ARB)."
+  },
+  {
+    "id": "51",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 1, what does a Class I recommendation indicate?",
+    "expected_keywords": [
+      "beneficial",
+      "useful",
+      "effective",
+      "có lợi",
+      "hữu ích",
+      "hiệu quả"
+    ],
+    "gold_standard": "EN: Evidence and/or general agreement that a given treatment or procedure is beneficial, useful, effective.\nVN: Bằng chứng và/hoặc sự đồng thuận chung rằng một phương pháp điều trị hoặc thủ thuật nhất định là có lợi, hữu ích, hiệu quả."
+  },
+  {
+    "id": "52",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Table 1, what specific wording is used for a Class IIa recommendation?",
+    "expected_keywords": [
+      "Should be considered",
+      "Nên được xem xét"
+    ],
+    "gold_standard": "EN: Should be considered.\nVN: Nên được xem xét."
+  },
+  {
+    "id": "53",
+    "category": "guideline_table_figure_query",
+    "question": "In Table 1, which class of recommendation indicates that a treatment or procedure is not recommended and may be harmful?",
+    "expected_keywords": [
+      "Class III",
+      "Nhóm III",
+      "Loại III"
+    ],
+    "gold_standard": "EN: Class III indicates that a treatment or procedure is not recommended and in some cases may be harmful.\nVN: Loại III chỉ ra rằng việc điều trị không được khuyến cáo và trong một số trường hợp có thể gây nguy hại."
+  },
+  {
+    "id": "54",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 2, what type of data derives a Level of Evidence A?",
+    "expected_keywords": [
+      "multiple randomized clinical trials",
+      "meta-analyses",
+      "nhiều thử nghiệm lâm sàng ngẫu nhiên",
+      "phân tích gộp"
+    ],
+    "gold_standard": "EN: Data derived from multiple randomized clinical trials or meta-analyses.\nVN: Dữ liệu bắt nguồn từ nhiều thử nghiệm lâm sàng ngẫu nhiên hoặc phân tích gộp."
+  },
+  {
+    "id": "55",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 2, what defines Level of Evidence C?",
+    "expected_keywords": [
+      "Consensus of opinion",
+      "small studies",
+      "retrospective",
+      "đồng thuận",
+      "nghiên cứu nhỏ",
+      "hồi cứu"
+    ],
+    "gold_standard": "EN: Consensus of opinion of the experts and/or small studies, retrospective studies, registries.\nVN: Sự đồng thuận của các chuyên gia và/hoặc các nghiên cứu nhỏ, nghiên cứu hồi cứu, sổ bộ."
+  },
+  {
+    "id": "56",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 5, what is the Daytime ABPM threshold for diagnosing Hypertension?",
+    "expected_keywords": [
+      ">=135/85",
+      "135/85"
+    ],
+    "gold_standard": "EN: Daytime ABPM >= 135/85 mmHg.\nVN: Huyết áp lưu động ban ngày >= 135/85 mmHg."
+  },
+  {
+    "id": "57",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Table 5, what is the Home BP (HBPM) threshold range for Elevated BP?",
+    "expected_keywords": [
+      "120/70 - <135/85",
+      "120/70",
+      "<135/85"
+    ],
+    "gold_standard": "EN: Home BP (HBPM) of 120/70 to <135/85 mmHg.\nVN: Huyết áp tại nhà (HBPM) từ 120/70 đến <135/85 mmHg."
+  },
+  {
+    "id": "58",
+    "category": "guideline_table_figure_query",
+    "question": "In Table 6, what is listed as a major disadvantage of home blood pressure monitoring (HBPM) regarding sleep?",
+    "expected_keywords": [
+      "Nocturnal readings not usually possible",
+      "không thể đo ban đêm",
+      "ban đêm"
+    ],
+    "gold_standard": "EN: Nocturnal readings not usually possible.\nVN: Việc đo huyết áp ban đêm thường không thể thực hiện được."
+  },
+  {
+    "id": "59",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 6, which monitoring method provides abundant information including short-term diurnal BP variability?",
+    "expected_keywords": [
+      "Ambulatory monitoring",
+      "ABPM",
+      "Đo huyết áp lưu động"
+    ],
+    "gold_standard": "EN: Ambulatory blood pressure monitoring (ABPM).\nVN: Theo dõi huyết áp lưu động (ABPM)."
+  },
+  {
+    "id": "60",
+    "category": "guideline_table_figure_query",
+    "question": "In Table 7, what is the patient's example question for the 'Timeline' illness representation?",
+    "expected_keywords": [
+      "acute or chronic",
+      "cấp tính hay mãn tính"
+    ],
+    "gold_standard": "EN: Is this an acute or chronic problem?\nVN: Đây là một vấn đề cấp tính hay mãn tính?"
+  },
+  {
+    "id": "61",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 8, which routine laboratory tests are recommended to screen for Cushing's disease, polycythaemia, or hyperparathyroidism?",
+    "expected_keywords": [
+      "Blood sodium",
+      "potassium",
+      "haemoglobin",
+      "haematocrit",
+      "calcium",
+      "TSH",
+      "natri",
+      "kali",
+      "canxi"
+    ],
+    "gold_standard": "EN: Blood sodium, potassium, haemoglobin, haematocrit, calcium, and TSH.\nVN: Natri máu, kali máu, hemoglobin, dung tích hồng cầu (haematocrit), canxi và TSH."
+  },
+  {
+    "id": "62",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Table 8, what routine tests are used to assess HMOD and guide treatment choice related to the kidneys?",
+    "expected_keywords": [
+      "creatinine",
+      "eGFR",
+      "urinalysis",
+      "ACR",
+      "nước tiểu"
+    ],
+    "gold_standard": "EN: Blood creatinine, eGFR, urinalysis, and urinary albumin-to-creatinine ratio (ACR).\nVN: Creatinine máu, eGFR, xét nghiệm nước tiểu và tỷ lệ albumin/creatinine nước tiểu."
+  },
+  {
+    "id": "63",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 9, what is the clinical utility of checking the Ankle-brachial index?",
+    "expected_keywords": [
+      "established CVD",
+      "lower-extremity arterial disease",
+      "bệnh động mạch chi dưới",
+      "bệnh tim mạch đã xác định"
+    ],
+    "gold_standard": "EN: Assessing established CVD (lower-extremity arterial disease).\nVN: Đánh giá bệnh tim mạch đã xác định (bệnh động mạch chi dưới)."
+  },
+  {
+    "id": "64",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 10, what eGFR value necessitates an adequately up-titrated loop diuretic to define resistant hypertension?",
+    "expected_keywords": [
+      "<30",
+      "30 mL/min/1.73 m2"
+    ],
+    "gold_standard": "EN: eGFR < 30 mL/min/1.73 m2.\nVN: eGFR < 30 mL/min/1.73 m2."
+  },
+  {
+    "id": "65",
+    "category": "guideline_table_figure_query",
+    "question": "In Table 11, what rare syndrome is listed as a cause of pseudo-resistant hypertension?",
+    "expected_keywords": [
+      "Munchausen syndrome",
+      "Hội chứng Munchausen"
+    ],
+    "gold_standard": "EN: Munchausen syndrome.\nVN: Hội chứng Munchausen."
+  },
+  {
+    "id": "66",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Table 12, how do Beta-adrenergic blockers affect the aldosterone-to-renin ratio (ARR)?",
+    "expected_keywords": [
+      "Increase",
+      "FP",
+      "False positive",
+      "Tăng",
+      "Dương tính giả"
+    ],
+    "gold_standard": "EN: They increase the ARR (False positive).\nVN: Chúng làm tăng tỷ lệ ARR (Dương tính giả)."
+  },
+  {
+    "id": "67",
+    "category": "guideline_table_figure_query",
+    "question": "According to Table 12, what effect do ACE inhibitors have on the ARR?",
+    "expected_keywords": [
+      "Decrease",
+      "FN",
+      "False negative",
+      "Giảm",
+      "Âm tính giả"
+    ],
+    "gold_standard": "EN: They decrease the ARR (False negative).\nVN: Chúng làm giảm tỷ lệ ARR (Âm tính giả)."
+  },
+  {
+    "id": "68",
+    "category": "guideline_table_figure_query",
+    "question": "In Table 13, what is the recommended screening test for Primary aldosteronism?",
+    "expected_keywords": [
+      "Aldosterone-to-renin ratio",
+      "ARR",
+      "Tỷ lệ Aldosterone-renin"
+    ],
+    "gold_standard": "EN: Aldosterone-to-renin ratio (ARR).\nVN: Tỷ lệ Aldosterone-renin (ARR)."
+  },
+  {
+    "id": "69",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Table 13, what screening test is used for Phaeochromocytoma/paraganglioma?",
+    "expected_keywords": [
+      "24 h urinary",
+      "plasma metanephrine",
+      "normetanephrine",
+      "nước tiểu 24h",
+      "huyết tương"
+    ],
+    "gold_standard": "EN: 24 h urinary or plasma metanephrine and normetanephrine.\nVN: Metanephrine và normetanephrine trong nước tiểu 24h hoặc trong huyết tương."
+  },
+  {
+    "id": "70",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 1, what are the four main physiological mechanisms contributing to elevated BP alongside genetic, behavioural, environmental, and socio-economic factors?",
+    "expected_keywords": [
+      "Renal",
+      "Neural",
+      "Hormonal",
+      "Vascular",
+      "Thận",
+      "Thần kinh",
+      "Nội tiết",
+      "Mạch máu"
+    ],
+    "gold_standard": "EN: Renal, Neural, Hormonal, and Vascular mechanisms.\nVN: Các cơ chế về Thận, Thần kinh, Nội tiết và Mạch máu."
+  },
+  {
+    "id": "71",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 2, what specific conditions are listed as Hypertension-Mediated Organ Damage (HMOD) for the Brain?",
+    "expected_keywords": [
+      "White matter lesions",
+      "Silent microinfarcts",
+      "Microbleeds",
+      "Brain atrophy",
+      "Tổn thương chất trắng",
+      "Nhồi máu vi thể",
+      "Vi xuất huyết",
+      "Teo não"
+    ],
+    "gold_standard": "EN: White matter lesions, Silent microinfarcts, Microbleeds, Brain atrophy.\nVN: Tổn thương chất trắng, Nhồi máu vi thể thầm lặng, Vi xuất huyết, Teo não."
+  },
+  {
+    "id": "72",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 3, how many times should BP be measured in the office, and how far apart?",
+    "expected_keywords": [
+      "three times",
+      "1-2 min apart",
+      "3 lần",
+      "1-2 phút"
+    ],
+    "gold_standard": "EN: Three times, 1-2 min apart.\nVN: Đo 3 lần, cách nhau 1-2 phút."
+  },
+  {
+    "id": "73",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Figure 4, how many days ideally should a patient obtain HBPM readings?",
+    "expected_keywords": [
+      "3",
+      "7",
+      "days",
+      "ngày"
+    ],
+    "gold_standard": "EN: Ideally 7 days (minimum 3 days).\nVN: Lý tưởng là 7 ngày (tối thiểu 3 ngày)."
+  },
+  {
+    "id": "74",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 5, what is the minimum percentage of usable BP recordings required for ABPM?",
+    "expected_keywords": [
+      "70%",
+      "70 phần trăm"
+    ],
+    "gold_standard": "EN: 70% usable BP recordings.\nVN: Ít nhất 70% kết quả đo có thể sử dụng được."
+  },
+  {
+    "id": "75",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 6, what is the Daytime ABPM threshold for Non-elevated blood pressure?",
+    "expected_keywords": [
+      "<120",
+      "<70",
+      "Daytime"
+    ],
+    "gold_standard": "EN: Daytime ABPM <120/<70 mmHg.\nVN: Huyết áp ban ngày theo ABPM <120/<70 mmHg."
+  },
+  {
+    "id": "76",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 7, what eGFR and albuminuria criteria define moderate or severe CKD?",
+    "expected_keywords": [
+      "eGFR <60",
+      "albuminuria >=30"
+    ],
+    "gold_standard": "EN: eGFR <60 mL/min/1.73 m2 or albuminuria >=30 mg/g.\nVN: eGFR <60 mL/min/1.73 m2 hoặc albumin niệu >=30 mg/g."
+  },
+  {
+    "id": "77",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 8, name three sex-specific risk modifiers (Class IIa).",
+    "expected_keywords": [
+      "Gestational diabetes",
+      "Gestational hypertension",
+      "Pre-eclampsia",
+      "Pre-term delivery",
+      "stillbirth",
+      "Recurrent miscarriage",
+      "đái tháo đường thai kỳ",
+      "tiền sản giật",
+      "sinh non",
+      "thai lưu",
+      "sảy thai"
+    ],
+    "gold_standard": "EN: Gestational diabetes, Gestational hypertension, and Pre-eclampsia.\nVN: Đái tháo đường thai kỳ, Tăng huyết áp thai kỳ, và Tiền sản giật."
+  },
+  {
+    "id": "78",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Figure 8, what class of recommendation do the shared risk modifiers fall under?",
+    "expected_keywords": [
+      "Class IIa",
+      "Nhóm IIa",
+      "Loại IIa"
+    ],
+    "gold_standard": "EN: Class IIa.\nVN: Loại IIa."
+  },
+  {
+    "id": "79",
+    "category": "guideline_table_figure_query",
+    "question": "In the algorithm of Figure 9, what risk tool is specifically considered for patients with Type 2 Diabetes Mellitus only, and are under 60 years old?",
+    "expected_keywords": [
+      "SCORE2-Diabetes"
+    ],
+    "gold_standard": "EN: SCORE2-Diabetes.\nVN: SCORE2-Diabetes."
+  },
+  {
+    "id": "80",
+    "category": "guideline_table_figure_query",
+    "question": "According to the protocol in Figure 10, what should be done if the screening office BP is >= 180/110 mmHg?",
+    "expected_keywords": [
+      "Evaluate for hypertensive emergency",
+      "Đánh giá cấp cứu tăng huyết áp",
+      "hypertensive emergency"
+    ],
+    "gold_standard": "EN: Evaluate for hypertensive emergency.\nVN: Đánh giá tình trạng cấp cứu tăng huyết áp."
+  },
+  {
+    "id": "81",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 11, how is non-adherence defined in the 'Implementation' phase?",
+    "expected_keywords": [
+      "Patient does not take medication as prescribed",
+      "không dùng thuốc như kê đơn"
+    ],
+    "gold_standard": "EN: Patient does not take medication as prescribed.\nVN: Bệnh nhân không dùng thuốc theo đơn đã kê."
+  },
+  {
+    "id": "82",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 12, what is the threshold for LV mass/BSA in women to diagnose Left Ventricular Hypertrophy (LVH)?",
+    "expected_keywords": [
+      ">95",
+      "95 g/m2"
+    ],
+    "gold_standard": "EN: >95 g/m2.\nVN: >95 g/m2."
+  },
+  {
+    "id": "83",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Figure 12, what is the Carotid-femoral PWV threshold for diagnosing arterial HMOD?",
+    "expected_keywords": [
+      ">10",
+      ">10 m/s"
+    ],
+    "gold_standard": "EN: >10 m/s.\nVN: >10 m/s."
+  },
+  {
+    "id": "84",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 13, what is the recommended surgical treatment for primary aldosteronism?",
+    "expected_keywords": [
+      "unilateral adrenalectomy",
+      "Cắt bỏ tuyến thượng thận một bên"
+    ],
+    "gold_standard": "EN: Unilateral adrenalectomy.\nVN: Phẫu thuật cắt bỏ tuyến thượng thận một bên."
+  },
+  {
+    "id": "85",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 14, what are the two main pathophysiological causes of significant renal artery stenosis?",
+    "expected_keywords": [
+      "Atherosclerosis",
+      "Fibromuscular dysplasia",
+      "Xơ vữa động mạch",
+      "Loạn sản sợi cơ"
+    ],
+    "gold_standard": "EN: Atherosclerosis and Fibromuscular dysplasia.\nVN: Xơ vữa động mạch và loạn sản cơ sợi."
+  },
+  {
+    "id": "86",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 15, what dipping pattern on 24h ABPM is listed as a sign of Obstructive sleep apnoea?",
+    "expected_keywords": [
+      "Non-dipping",
+      "reverse dipping",
+      "Mất trũng",
+      "trũng ngược"
+    ],
+    "gold_standard": "EN: Non-dipping or reverse dipping.\nVN: Mất trũng huyết áp hoặc trũng ngược."
+  },
+  {
+    "id": "87",
+    "category": "guideline_table_figure_query",
+    "question": "According to Figure 16, what is the recommendation class for dynamic or isometric resistance training to complement aerobic exercise?",
+    "expected_keywords": [
+      "Class I",
+      "Nhóm I",
+      "Loại I"
+    ],
+    "gold_standard": "EN: Class I.\nVN: Khuyến cáo Loại I."
+  },
+  {
+    "id": "88",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 17, which lifestyle factor reduces overall CV risk but does not directly reduce BP?",
+    "expected_keywords": [
+      "No smoking",
+      "Smoking cessation",
+      "Không hút thuốc",
+      "Bỏ thuốc lá"
+    ],
+    "gold_standard": "EN: Smoking cessation (No smoking).\nVN: Cai thuốc lá (Không hút thuốc)."
+  },
+  {
+    "id": "89",
+    "category": "guideline_table_figure_query",
+    "question": "Based on Figure 18, what is the preferred initial pharmacological strategy for most patients with elevated BP category (120/70-139/89 mmHg) who need treatment?",
+    "expected_keywords": [
+      "Initial monotherapy",
+      "Đơn trị liệu ban đầu"
+    ],
+    "gold_standard": "EN: Initial monotherapy.\nVN: Đơn trị liệu ban đầu."
+  },
+  {
+    "id": "90",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 18, at what step can beta-blockers be added if compelling indications exist?",
+    "expected_keywords": [
+      "At any step",
+      "Ở bất kỳ bước nào"
+    ],
+    "gold_standard": "EN: At any step.\nVN: Ở bất kỳ bước nào."
+  },
+  {
+    "id": "91",
+    "category": "guideline_table_figure_query",
+    "question": "According to the Central Illustration (Figure 19), what is the specific BP target for adults with Elevated BP who are prescribed drug treatment?",
+    "expected_keywords": [
+      "Target SBP 120-129",
+      "Target DBP 70-79",
+      "120-129",
+      "70-79"
+    ],
+    "gold_standard": "EN: Target SBP 120-129 mmHg and DBP 70-79 mmHg.\nVN: Mục tiêu SBP 120-129 mmHg và DBP 70-79 mmHg."
+  },
+  {
+    "id": "92",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 20, what specific value is marked as the optimal point in the SBP target range if tolerated?",
+    "expected_keywords": [
+      "SBP 120",
+      "120 mmHg",
+      "120"
+    ],
+    "gold_standard": "EN: SBP 120 mmHg.\nVN: SBP 120 mmHg."
+  },
+  {
+    "id": "93",
+    "category": "guideline_table_figure_query",
+    "question": "According to the Clinical Frailty Scale in Figure 21, what defines category 8 (Very severely frail)?",
+    "expected_keywords": [
+      "Completely dependent",
+      "approaching the end of life",
+      "Hoàn toàn phụ thuộc",
+      "gần cuối đời"
+    ],
+    "gold_standard": "EN: Completely dependent, approaching the end of life.\nVN: Hoàn toàn phụ thuộc, gần cuối đời."
+  },
+  {
+    "id": "94",
+    "category": "guideline_table_figure_query",
+    "question": "In Figure 22, what is the recommended alternative to Spironolactone if it is not tolerated in resistant hypertension?",
+    "expected_keywords": [
+      "Eplerenone"
+    ],
+    "gold_standard": "EN: Eplerenone.\nVN: Eplerenone."
+  },
+  {
+    "id": "95",
+    "category": "guideline_table_figure_query",
+    "question": "In Recommendation Table 1, what is the class of recommendation for measuring BP in both arms at least at the first visit?",
+    "expected_keywords": [
+      "Class I",
+      "Nhóm I",
+      "Loại I"
+    ],
+    "gold_standard": "EN: Class I.\nVN: Loại I."
+  },
+  {
+    "id": "96",
+    "category": "guideline_table_figure_query",
+    "question": "According to Recommendation Table 4, what is the level of evidence for using sex-specific risk modifiers to up-classify individuals with borderline CVD risk?",
+    "expected_keywords": [
+      "Level B",
+      "Mức B"
+    ],
+    "gold_standard": "EN: Level B.\nVN: Mức B."
+  },
+  {
+    "id": "97",
+    "category": "guideline_table_figure_query",
+    "question": "According to Recommendation Table 16, what is the class of recommendation for combining two RAS blockers (ACE inhibitor and an ARB)?",
+    "expected_keywords": [
+      "Class III",
+      "Nhóm III",
+      "Loại III"
+    ],
+    "gold_standard": "EN: Class III (Not recommended).\nVN: Loại III (Không được khuyến cáo)."
+  },
+  {
+    "id": "98",
+    "category": "guideline_table_figure_query",
+    "question": "What is the class of recommendation for renal denervation as a first-line BP-lowering intervention for hypertension, according to Recommendation Table 20?",
+    "expected_keywords": [
+      "Class III",
+      "Nhóm III",
+      "Loại III"
+    ],
+    "gold_standard": "EN: Class III.\nVN: Loại III."
+  },
+  {
+    "id": "99",
+    "category": "guideline_table_figure_query",
+    "question": "According to Recommendation Table 22, what is the class and level of recommendation for using RAS blockers during pregnancy?",
+    "expected_keywords": [
+      "Class III",
+      "Level B",
+      "Nhóm III",
+      "Mức B"
+    ],
+    "gold_standard": "EN: Class III, Level B.\nVN: Nhóm III, Mức B."
+  },
+  {
+    "id": "100",
+    "category": "guideline_table_figure_query",
+    "question": "In Recommendation Table 31, what is the class of recommendation for renal artery angioplasty without stenting in patients with fibromuscular dysplasia?",
+    "expected_keywords": [
+      "Class IIa",
+      "Nhóm IIa",
+      "Loại IIa"
+    ],
+    "gold_standard": "EN: Class IIa.\nVN: Loại IIa."
+  }
+]

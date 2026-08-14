@@ -1,0 +1,993 @@
+[
+  {
+    "id": "1",
+    "category": "medical_query",
+    "question": "Kiểm tra tiến trình đáp ứng và động viên là gì",
+    "expected_keywords": [
+      "cải thiện mức độ THA, HMOD",
+      "đạt được mục tiêu ngắn "
+    ],
+    "gold_standard": "Vậy là quá trình đánh giá lại sự tiến bộ của bệnh nhân trong việc cải thiện mức độ THA (Tỷ lệ Huyết Áp) và HMOD (Huyết Áp Máu Dịch), đồng thời thiết lập thêm mục tiêu mới khi bệnh nhân đạt được mục tiêu ngắn hạn."
+  },
+  {
+    "id": "2",
+    "category": "medical_query",
+    "question": "Mức huyết áp nào được VNHA 2024 xếp vào nhóm 'Tiền tăng huyết áp'?",
+    "expected_keywords": [
+      "120",
+      "139",
+      "70",
+      "89"
+    ],
+    "gold_standard": "Tiền tăng huyết áp là khi huyết áp tâm thu từ 120-139 mmHg và/hoặc huyết áp tâm trương từ 70-89 mmHg.[cite: 3]"
+  },
+  {
+    "id": "3",
+    "category": "medical_query",
+    "question": "Ngưỡng truyền thống để chẩn đoán tăng huyết áp là bao nhiêu?",
+    "expected_keywords": [
+      "140",
+      "90"
+    ],
+    "gold_standard": "Ngưỡng truyền thống để chẩn đoán tăng huyết áp là từ 140/90 mmHg trở lên.[cite: 3]"
+  },
+  {
+    "id": "4",
+    "category": "medical_query",
+    "question": "Tăng huyết áp áo choàng trắng là tình trạng như thế nào?",
+    "expected_keywords": [
+      "27%",
+      "THA áo choàng trắng"
+    ],
+    "gold_standard": "Tình trạng huyết áp THA áo choàng trắng có tỷ lệ là 27%"
+  },
+  {
+    "id": "5",
+    "category": "medical_query",
+    "question": "thế nào là  Điều chỉnh và tối ưu hóa phác đồ điều trị khi cần thiết",
+    "expected_keywords": [
+      "điều trị dựa trên dữ liệu thu thập",
+      "đáp ứng nhu cầu của bệnh nhân",
+      "điều chỉnh phác đồ điều trị nếu cần thiết để đạt được kết quả tốt hơn"
+    ],
+    "gold_standard": "Mục tiêu của việc điều chỉnh và tối ưu hóa phác đồ điều trị là đảm bảo rằng bệnh nhân nhận được điều trị tốt nhất có thể, giúp họ đạt được kết quả điều trị tốt hơn trong chất lượng cuộc sống."
+  },
+  {
+    "id": "6",
+    "category": "medical_query",
+    "question": "Mức huyết áp đo tại nhà (HBPM) là bao nhiêu thì được chẩn đoán là tăng huyết áp?",
+    "expected_keywords": [
+      "135",
+      "85"
+    ],
+    "gold_standard": "Huyết áp đo tại nhà có trung bình HATT/HATTr >= 135/85 mmHg sẽ được chẩn đoán là tăng huyết áp.[cite: 3]"
+  },
+  {
+    "id": "7",
+    "category": "medical_query",
+    "question": "Bệnh nhân cần nghỉ ngơi bao lâu trước khi thực hiện đo huyết áp tại phòng khám?",
+    "expected_keywords": [
+      "5",
+      "10",
+      "phút"
+    ],
+    "gold_standard": "Bệnh nhân cần nghỉ ngơi 5-10 phút để huyết áp ổn định trước khi đo.[cite: 3]"
+  },
+  {
+    "id": "8",
+    "category": "medical_query",
+    "question": "Trước khi đo huyết áp ít nhất 30 phút, bệnh nhân cần tránh sử dụng hoặc thực hiện những gì?",
+    "expected_keywords": [
+      "cà phê",
+      "trà",
+      "hút thuốc",
+      "vận động"
+    ],
+    "gold_standard": "Cần tránh dùng cà phê, trà, hút thuốc, hoặc vận động mạnh ít nhất 30 phút trước khi đo huyết áp.[cite: 3]"
+  },
+  {
+    "id": "9",
+    "category": "medical_query",
+    "question": "Đối với người có chu vi cánh tay từ 27-34 cm, nên sử dụng kích thước vòng bít nào?",
+    "expected_keywords": [
+      "vừa",
+      "m"
+    ],
+    "gold_standard": "Nên sử dụng kích thước vòng bít Vừa (M) cho chu vi cánh tay từ 27-34 cm.[cite: 3]"
+  },
+  {
+    "id": "10",
+    "category": "medical_query",
+    "question": "Tuân thủ (adherence) là gì",
+    "expected_keywords": [
+      "mức độ mà các hành vi của một người như dùng thuốc",
+      "ết thực"
+    ],
+    "gold_standard": "định nghĩa là mức độ mà các hành vi của một người như dùng thuốc, chế độ tiết thực hoặc thay đổi lối sống tương ứng với các khuyến cáo từ các chuyên gia sức khỏe"
+  },
+  {
+    "id": "11",
+    "category": "medical_query",
+    "question": "Tăng huyết áp (THA) hiện vẫn là một thách thức y tế hàng đầu, là nguyên nhân chính dẫn đến các bệnh lý gì",
+    "expected_keywords": [
+      "tim mạch ",
+      " tử vong trên toàn cầu"
+    ],
+    "gold_standard": "Tăng huyết áp (THA) là nguyên nhân chính dẫn đến các bệnh lý tim mạch và tử vong trên toàn cầu."
+  },
+  {
+    "id": "12",
+    "category": "medical_query",
+    "question": "Chữ Đ thứ nhất (Đ1) trong chiến lược 5Đ mang ý nghĩa gì?",
+    "expected_keywords": [
+      "đo",
+      "chẩn đoán",
+      "theo dõi"
+    ],
+    "gold_standard": "Đ1 mang ý nghĩa là Đo chẩn đoán theo dõi huyết áp (Track Blood Pressure - Diagnose).[cite: 3]"
+  },
+  {
+    "id": "13",
+    "category": "medical_query",
+    "question": "nội dung của Huyết áp là thang đo liên tục của nguy cơ",
+    "expected_keywords": [
+      "có thể tăng dần với bất kỳ mức huyết áp nào",
+      "huyết áp ≥130/80mmHg hoặc ≥140/90mmHg"
+    ],
+    "gold_standard": "tức huyết áp phòng khám đạt ≥130/80mmHg hoặc ≥140/90mmHg, tùy hiệp hội khuyến cáo và tài liệu đánh giá (3, 11, 12), mà có thể tăng dần với bất kỳ mức huyết áp nào cao hơn huyết áp lý tưởng."
+  },
+  {
+    "id": "14",
+    "category": "medical_query",
+    "question": "Mục tiêu chung của việc điều trị tăng huyết áp theo cá thể hóa là gì?",
+    "expected_keywords": [
+      "tim mạch",
+      "thận",
+      "tử vong",
+      "ngăn ngừa"
+    ],
+    "gold_standard": "Mục đích chính là ngăn ngừa các bệnh tim mạch thận do tăng HA và giảm tỷ lệ tử vong bằng cách kiểm soát HA đạt mục tiêu.[cite: 3]"
+  },
+  {
+    "id": "15",
+    "category": "medical_query",
+    "question": "Thuật ngữ huyết áp bình thường có thể khiến một số người lầm tưởng như thế nào ",
+    "expected_keywords": [
+      "dưới ngưỡng tăng huyết áp",
+      " không có nguy cơ bệnh tim mạch"
+    ],
+    "gold_standard": "huyết áp bình thường có thể khiến một số người lầm tưởng rằng chỉ cần huyết áp dưới ngưỡng tăng huyết áp thì không có nguy cơ bệnh tim mạch."
+  },
+  {
+    "id": "16",
+    "category": "medical_query",
+    "question": "Nếu bệnh nhân dung nạp tốt, mục tiêu huyết áp có thể hạ thấp hơn nữa đến mức nào?",
+    "expected_keywords": [
+      "120",
+      "70"
+    ],
+    "gold_standard": "Mục tiêu này có thể hạ thấp đến < 120/70 mmHg nếu dung nạp tốt, ở bệnh nhân nguy cơ cao và có theo dõi sát.[cite: 3]"
+  },
+  {
+    "id": "17",
+    "category": "medical_query",
+    "question": "Đặt mục tiêu huyết áp phù hợp với từng bệnh nhân dựa trên các yếu tố nguy cơ cá nhân, bao gồm mức độ gì",
+    "expected_keywords": [
+      "Mức độ suy yếu",
+      "Lão hóa",
+      "tình trạng sức khỏe",
+      "Các bệnh đồng mắc ",
+      "Bệnh kèm theo"
+    ],
+    "gold_standard": "Mức độ suy yếu,Lão hóa,tình trạng sức khỏe,Các bệnh đồng mắc,Bệnh kèm theo"
+  },
+  {
+    "id": "18",
+    "category": "medical_query",
+    "question": "Bệnh nhân trên 85 tuổi bị tăng huyết áp có nên duy trì sử dụng thuốc hạ áp không?",
+    "expected_keywords": [
+      "suốt đời",
+      "dung nạp tốt"
+    ],
+    "gold_standard": "Khuyến cáo duy trì điều trị bằng thuốc hạ huyết áp suốt đời, ngay cả khi bệnh nhân trên 85 tuổi, nếu được dung nạp tốt.[cite: 3]"
+  },
+  {
+    "id": "19",
+    "category": "medical_query",
+    "question": "khuyến cáo đối với Đối với bệnh nhân tăng huyết áp được xác nhận ≥140/90 mmHg, bất kể nguy cơ tim mạch (CVD) cần làm gì",
+    "expected_keywords": [
+      "HATT/HATTr: <130/80 mmHg nếu dung nạp",
+      "<120/70 mmHg nếu dung nạp tốt",
+      "cần bắt đầu ngay các biện pháp thay đổi lối sống và điều trị bằng thuốc hạ huyết áp phối hợp thuốc đôi liều thấp"
+    ],
+    "gold_standard": "Bắt đầu ngay các biện pháp thay đổi lối sống, Điều trị bằng thuốc hạ huyết áp phối hợp thuốc đôi liều thấp, Mục tiêu theo cá thể hóa: HATT/HATTr: <130/80 mmHg nếu dung nạp"
+  },
+  {
+    "id": "20",
+    "category": "medical_query",
+    "question": "Hạ huyết áp tư thế đứng được xác định khi các chỉ số giảm ở mức bao nhiêu?",
+    "expected_keywords": [
+      "20",
+      "10"
+    ],
+    "gold_standard": "Hạ huyết áp tư thế đứng được xem là có khi huyết áp giảm >= 20/10 mmHg sau khi đứng lên.[cite: 3]"
+  },
+  {
+    "id": "21",
+    "category": "medical_query",
+    "question": "Bệnh nhân rung nhĩ nên dùng phương pháp nào để đo huyết áp chính xác?",
+    "expected_keywords": [
+      "nghe tim",
+      "thủ công",
+      "bắt mạch"
+    ],
+    "gold_standard": "Đối với bệnh nhân có rung nhĩ (RN), ưu tiên phương pháp nghe tim thủ công bắt mạch.[cite: 3]"
+  },
+  {
+    "id": "22",
+    "category": "medical_query",
+    "question": "Hiện tượng huyết áp tăng đột ngột vào buổi sáng khi người bệnh vừa thức dậy gọi là gì?",
+    "expected_keywords": [
+      "vọt",
+      "buổi sáng",
+      "surge"
+    ],
+    "gold_standard": "Đây được gọi là hiện tượng Tăng huyết áp vọt (surge) buổi sáng.[cite: 3]"
+  },
+  {
+    "id": "23",
+    "category": "medical_query",
+    "question": "Tăng huyết áp ban đêm đơn độc thường gặp ở những đối tượng có yếu tố nào?",
+    "expected_keywords": [
+      "người lớn tuổi",
+      "nam",
+      "béo phì",
+      "ngưng thở"
+    ],
+    "gold_standard": "Có xu hướng thường gặp ở người lớn tuổi, nam giới, chỉ số BMI cao, uống nhiều rượu, bệnh thận mạn, ĐTĐ hoặc ngưng thở khi ngủ.[cite: 3]"
+  },
+  {
+    "id": "24",
+    "category": "medical_query",
+    "question": "khuyến cáo về Đối với các trường hợp không chắc chắn về lợi ích trong việc giảm các biến cố tim mạch (CVD)",
+    "expected_keywords": [
+      "điều trị hạ huyết áp chỉ khi huyết áp ≥140/90 mmHg",
+      "Tuổi ≥85 năm."
+    ],
+    "gold_standard": "Hạ huyết áp tư thế triệu chứng trước điều trị, Tuổi ≥85 năm."
+  },
+  {
+    "id": "25",
+    "category": "medical_query",
+    "question": "Chế độ ăn giảm lượng muối tiêu thụ khuyến cáo cho bệnh nhân tăng huyết áp là bao nhiêu mỗi ngày?",
+    "expected_keywords": [
+      "5",
+      "gam",
+      "natri"
+    ],
+    "gold_standard": "Khuyến cáo hạn chế muối < 5 g (khoảng 2 g natri) hoặc 1 muỗng cà phê mỗi ngày.[cite: 3]"
+  },
+  {
+    "id": "26",
+    "category": "medical_query",
+    "question": "Đối với bệnh nhân tăng huyết áp, việc tập thể dục aerobic cường độ vừa nên thực hiện ít nhất bao nhiêu phút mỗi tuần?",
+    "expected_keywords": [
+      "150",
+      "phút"
+    ],
+    "gold_standard": "Nên tập thể dục aerobic cường độ vừa ít nhất 150 phút mỗi tuần (ít nhất 30 phút, 5-7 ngày/tuần).[cite: 3]"
+  },
+  {
+    "id": "27",
+    "category": "medical_query",
+    "question": "khuyến cáo cho Trong trường hợp điều trị hạ huyết áp không được dung nạp tốt và không thể đạt được mục tiêu huyết áp tâm thu 120–129 mmHg",
+    "expected_keywords": [
+      "Hướng tới mức huyết áp tâm thu thấp nhất",
+      "nguyên tắc ALARA"
+    ],
+    "gold_standard": "Hướng tới mức huyết áp tâm thu thấp nhất có thể đạt được một cách hợp lý (nguyên tắc ALARA – As Low As Reasonably Achievable"
+  },
+  {
+    "id": "28",
+    "category": "medical_query",
+    "question": "Mục tiêu vòng eo lý tưởng đối với nữ giới bị tăng huyết áp là bao nhiêu?",
+    "expected_keywords": [
+      "80",
+      "cm"
+    ],
+    "gold_standard": "Mục tiêu vòng eo ở nữ giới là < 80 cm.[cite: 3]"
+  },
+  {
+    "id": "29",
+    "category": "medical_query",
+    "question": "Bệnh nhân có tiền tăng huyết áp kèm theo đái tháo đường cần được xử trí ban đầu như thế nào?",
+    "expected_keywords": [
+      "thay đổi lối sống",
+      "điều trị thuốc sớm",
+      "liều thấp"
+    ],
+    "gold_standard": "Cần bắt đầu thay đổi lối sống và điều trị thuốc sớm với phối hợp đôi liều thấp.[cite: 3]"
+  },
+  {
+    "id": "30",
+    "category": "medical_query",
+    "question": "Năm nhóm thuốc chính nào được khuyến cáo dùng trong điều trị tăng huyết áp?",
+    "expected_keywords": [
+      "ức chế men chuyển",
+      "chẹn thụ thể",
+      "chẹn beta",
+      "chẹn kênh canxi",
+      "lợi tiểu"
+    ],
+    "gold_standard": "Năm nhóm thuốc chính là A (ƯCMC/CTTA), B (Chẹn beta), C (Chẹn kênh canxi), và D (Lợi tiểu).[cite: 3]"
+  },
+  {
+    "id": "31",
+    "category": "medical_query",
+    "question": "Nhóm thuốc A trong điều trị tăng huyết áp là ký hiệu của các loại thuốc nào?",
+    "expected_keywords": [
+      "ức chế men chuyển",
+      "ưcmc",
+      "chẹn thụ thể",
+      "ctta"
+    ],
+    "gold_standard": "Nhóm A là thuốc ức chế men chuyển (ƯCMC) và thuốc chẹn thụ thể angiotensin (CTTA).[cite: 3]"
+  },
+  {
+    "id": "32",
+    "category": "medical_query",
+    "question": "Thuốc chẹn kênh canxi thuộc nhóm chữ cái nào trong phân loại thuốc điều trị tăng huyết áp?",
+    "expected_keywords": [
+      "nhóm c"
+    ],
+    "gold_standard": "Thuốc chẹn kênh canxi (CKCa) được xếp vào Nhóm C.[cite: 3]"
+  },
+  {
+    "id": "33",
+    "category": "medical_query",
+    "question": "thế nào là Tăng huyết áp bền vững (Sustained Hypertension)",
+    "expected_keywords": [
+      "OBPM ≥140/90 mmHg",
+      "HBPM ≥135/85 mmHg",
+      "ABPM (trung bình 24 giờ) ≥130/80 mmHg"
+    ],
+    "gold_standard": "OBPM ≥140/90 mmHg, HBPM ≥135/85 mmHg, ABPM (trung bình 24 giờ) ≥130/80 mmHg"
+  },
+  {
+    "id": "34",
+    "category": "medical_query",
+    "question": "Tăng huyết áp kháng trị thật sự là gì?",
+    "expected_keywords": [
+      "140",
+      "90",
+      "tối ưu",
+      "3 thuốc",
+      "lợi tiểu"
+    ],
+    "gold_standard": "Là khi HATT/HATTr >= 140/90 mmHg mặc dù đã dùng liều tối ưu của 3 loại thuốc phối hợp, trong đó có lợi tiểu.[cite: 3]"
+  },
+  {
+    "id": "35",
+    "category": "medical_query",
+    "question": "Tăng huyết áp áo choàng trắng (White-Coat Hypertension) đo như thế nào ",
+    "expected_keywords": [
+      " (OBPM) ≥140/90 mmHg",
+      " (HBPM) <135/85 mmHg",
+      " (ABPM) <130/80 mmHg"
+    ],
+    "gold_standard": "OBPM ≥140/90 mmHg, nhưng HBPM <135/85 mmHg hoặc ABPM <130/80 mmHg (bình thường ngoài phòng khám)"
+  },
+  {
+    "id": "36",
+    "category": "medical_query",
+    "question": "Theo Tổ chức Y tế Thế giới (WHO), có bao nhiêu khía cạnh chính ảnh hưởng đến việc tuân thủ thuốc của bệnh nhân?",
+    "expected_keywords": [
+      "năm",
+      "5",
+      "khía cạnh"
+    ],
+    "gold_standard": "Theo WHO, có 5 khía cạnh ảnh hưởng gồm: xã hội-kinh tế, liệu pháp, bệnh nhân, điều kiện, và hệ thống y tế.[cite: 3]"
+  },
+  {
+    "id": "37",
+    "category": "medical_query",
+    "question": "Trong lộ trình 5Đ, việc đánh giá lại ngắn hạn để xem xét đáp ứng điều trị nên được thực hiện trong thời gian bao lâu?",
+    "expected_keywords": [
+      "3 tháng",
+      "1 năm",
+      "ngắn hạn"
+    ],
+    "gold_standard": "Việc đánh giá đáp ứng ngắn hạn để thiết lập kiểm soát HA ổn định nên được thực hiện từ 3 tháng đến 1 năm.[cite: 3]"
+  },
+  {
+    "id": "38",
+    "category": "medical_query",
+    "question": "Rào cản về xã hội và dân số học khiến bệnh nhân không tuân thủ điều trị thường bao gồm những gì?",
+    "expected_keywords": [
+      "kinh tế",
+      "nghèo",
+      "phương tiện",
+      "ngôn ngữ"
+    ],
+    "gold_standard": "Thường bao gồm tình trạng kinh tế-xã hội thấp, thiếu phương tiện di chuyển, hoặc rào cản về ngôn ngữ.[cite: 3]"
+  },
+  {
+    "id": "39",
+    "category": "medical_query",
+    "question": "Cách tiếp cận 'Lấy bệnh nhân làm trung tâm' có ý nghĩa gì trong quản lý tăng huyết áp?",
+    "expected_keywords": [
+      "nhu cầu",
+      "chủ động",
+      "tham gia"
+    ],
+    "gold_standard": "Nghĩa là tập trung vào nhu cầu, mục tiêu và tạo điều kiện cho bệnh nhân tham gia chủ động vào quá trình ra quyết định điều trị.[cite: 3]"
+  },
+  {
+    "id": "40",
+    "category": "medical_query",
+    "question": "nội dung của Huyết áp không tăng (Not Elevated BP)",
+    "expected_keywords": [
+      "HATT/HATTr <120/70 mmHg"
+    ],
+    "gold_standard": "Huyết áp trong giới hạn bình thường cả ở phòng khám và ngoài phòng khám. HATT/HATTr <120/70 mmHg "
+  },
+  {
+    "id": "41",
+    "category": "medical_query",
+    "question": "Nếu bệnh nhân gặp tác dụng phụ như ho khan khi dùng thuốc, bác sĩ thường xử lý theo hướng nào trong chiến lược 5Đ?",
+    "expected_keywords": [
+      "điều chỉnh",
+      "thay đổi thuốc"
+    ],
+    "gold_standard": "Bác sĩ sẽ kiểm tra và điều chỉnh, có thể thay đổi loại thuốc hoặc đưa ra các biện pháp hỗ trợ để bệnh nhân dễ dung nạp hơn (Đáp ứng điều trị).[cite: 3]"
+  },
+  {
+    "id": "42",
+    "category": "medical_query",
+    "question": "Để theo dõi lâu dài sự biến thiên của huyết áp, phương pháp đo ngoài phòng khám nào được khuyến khích sử dụng thường xuyên?",
+    "expected_keywords": [
+      "tại nhà",
+      "hbpm"
+    ],
+    "gold_standard": "Khuyến khích bệnh nhân tự đo huyết áp tại nhà (HBPM) liên tục để theo dõi biến động.[cite: 3]"
+  },
+  {
+    "id": "43",
+    "category": "medical_query",
+    "question": "Nhóm thuốc Lợi tiểu trong điều trị tăng huyết áp được ký hiệu bằng chữ cái gì?",
+    "expected_keywords": [
+      "nhóm d"
+    ],
+    "gold_standard": "Nhóm Lợi tiểu (Thiazides và Thiazide-like) được ký hiệu bằng chữ D.[cite: 3]"
+  },
+  {
+    "id": "44",
+    "category": "medical_query",
+    "question": "Tự theo dõi liên tục và tăng cường hợp tác bệnh nhân và bác sĩ",
+    "expected_keywords": [
+      "Bệnh nhân được khuyến khích tự đo huyết áp hàng ngày",
+      "phương pháp theo dõi trung tâm cá thể hóa",
+      "các buổi tái khám định kỳ, bệnh nhân có thể thảo luận về kết quả theo dõi với bác sĩ"
+    ],
+    "gold_standard": "tự theo dõi liên tục và tăng cường hợp tác giữa bệnh nhân và bác sĩ là rất quan trọng trong quản lý huyết áp, giúp cải thiện ý thức về tình trạng sức khỏe, tăng cường hợp tác và xây dựng kế hoạch điều trị phù hợp nhất"
+  },
+  {
+    "id": "45",
+    "category": "medical_query",
+    "question": "Lượng đường tự do ăn vào nên được hạn chế ở mức bao nhiêu phần trăm tổng năng lượng?",
+    "expected_keywords": [
+      "10%"
+    ],
+    "gold_standard": "Khuyến cáo giảm tiêu thụ đường tự do tối đa không quá 10% tổng năng lượng mỗi ngày.[cite: 3]"
+  },
+  {
+    "id": "46",
+    "category": "greeting",
+    "question": "Chào bác sĩ, bác sĩ có đang online không ạ?",
+    "expected_keywords": [],
+    "gold_standard": "Chào bạn, tôi là trợ lý ảo hỗ trợ thông tin y khoa. Tôi có thể giúp gì cho bạn hôm nay?"
+  },
+  {
+    "id": "47",
+    "category": "greeting",
+    "question": "Hello, có ai tư vấn giúp mình được không?",
+    "expected_keywords": [],
+    "gold_standard": "Xin chào! Mình ở đây để giúp bạn giải đáp các thắc mắc về sức khỏe và bệnh lý. Bạn cần thông tin gì?"
+  },
+  {
+    "id": "48",
+    "category": "greeting",
+    "question": "Xin chào buổi sáng hệ thống!",
+    "expected_keywords": [],
+    "gold_standard": "Chào buổi sáng! Chúc bạn một ngày tốt lành. Tôi có thể hỗ trợ thông tin gì cho bạn?"
+  },
+  {
+    "id": "49",
+    "category": "Out of domain",
+    "question": "Bạn có thể hướng dẫn tôi cách tính thuế thu nhập cá nhân năm 2024 không?",
+    "expected_keywords": [],
+    "gold_standard": "Xin lỗi, tôi là trợ lý ảo chuyên cung cấp thông tin y khoa và sức khỏe. Tôi không có dữ liệu về luật thuế hoặc tài chính."
+  },
+  {
+    "id": "50",
+    "category": "Out of domain",
+    "question": "Triệu chứng của bệnh gãy xương và cách bó bột tại nhà là gì?",
+    "expected_keywords": [],
+    "gold_standard": "Xin lỗi, câu hỏi này nằm ngoài phạm vi tài liệu (chuyên về tăng huyết áp). Vui lòng đến cơ sở y tế gần nhất để được chụp X-quang và xử lý chấn thương."
+  },
+  {
+    "id": "51",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, định nghĩa và gợi ý sử dụng của khuyến cáo loại I là gì?",
+    "expected_keywords": [
+      "chứng cứ",
+      "đồng thuận",
+      "lợi ích",
+      "hiệu quả",
+      "được khuyến cáo",
+      "chỉ định"
+    ],
+    "gold_standard": "Chứng cứ và/ hoặc sự đồng thuận cho thấy việc điều trị mang lại lợi ích và hiệu quả. Gợi ý sử dụng là: Được khuyến cáo/ chỉ định."
+  },
+  {
+    "id": "52",
+    "category": "medical_query",
+    "question": "Khuyến cáo loại II trong tài liệu VNHA được định nghĩa như thế nào khi chứng cứ còn bàn cãi?",
+    "expected_keywords": [
+      "chứng cứ",
+      "bàn cãi",
+      "ý kiến khác nhau",
+      "hữu ích",
+      "hiệu quả"
+    ],
+    "gold_standard": "Chứng cứ đang còn bàn cãi và/hoặc ý kiến khác nhau về sự hữu ích/hiệu quả của việc điều trị."
+  },
+  {
+    "id": "53",
+    "category": "medical_query",
+    "question": "Định nghĩa cụ thể và gợi ý sử dụng của khuyến cáo loại IIa theo tài liệu VNHA là gì?",
+    "expected_keywords": [
+      "phần lớn",
+      "chứng cứ",
+      "ý kiến",
+      "ủng hộ",
+      "hiệu quả",
+      "nên được xem xét"
+    ],
+    "gold_standard": "Phần lớn chứng cứ/ý kiến ủng hộ về tính hiệu quả của việc điều trị. Gợi ý sử dụng là: Nên được xem xét."
+  },
+  {
+    "id": "54",
+    "category": "medical_query",
+    "question": "Khuyến cáo loại IIb có định nghĩa và gợi ý sử dụng như thế nào?",
+    "expected_keywords": [
+      "chứng cứ",
+      "chưa cho thấy",
+      "hiệu quả",
+      "hữu ích",
+      "có thể được xem xét"
+    ],
+    "gold_standard": "Chứng cứ/ý kiến chưa cho thấy hiệu quả/hữu ích. Gợi ý sử dụng là: Có thể được xem xét."
+  },
+  {
+    "id": "55",
+    "category": "medical_query",
+    "question": "Theo bảng phân loại trong tài liệu VNHA, khuyến cáo loại III được định nghĩa ra sao?",
+    "expected_keywords": [
+      "chứng cứ",
+      "đồng thuận",
+      "không mang lại lợi ích",
+      "hiệu quả",
+      "nguy hại"
+    ],
+    "gold_standard": "Chứng cứ và/ hoặc sự đồng thuận cho thấy việc điều trị không mang lại lợi ích và hiệu quả trong vài trường hợp có thể gây nguy hại."
+  },
+  {
+    "id": "56",
+    "category": "medical_query",
+    "question": "Mức chứng cứ A của tài liệu VNHA được định nghĩa chính xác bằng những dữ liệu nào?",
+    "expected_keywords": [
+      "dữ liệu",
+      "nhiều nghiên cứu lâm sàng ngẫu nhiên",
+      "phân tích gộp"
+    ],
+    "gold_standard": "Dữ liệu có từ nhiều nghiên cứu lâm sàng ngẫu nhiên hoặc các phân tích gộp."
+  },
+  {
+    "id": "57",
+    "category": "medical_query",
+    "question": "Mức chứng cứ B theo tài liệu VNHA bao gồm những nguồn dữ liệu nào?",
+    "expected_keywords": [
+      "dữ liệu",
+      "nghiên cứu lâm sàng ngẫu nhiên",
+      "nghiên cứu lớn không ngẫu nhiên"
+    ],
+    "gold_standard": "Dữ liệu có từ nhiều nghiên cứu lâm sàng ngẫu nhiên hoặc các nghiên cứu lớn không ngẫu nhiên."
+  },
+  {
+    "id": "58",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, mức chứng cứ C được định nghĩa như thế nào?",
+    "expected_keywords": [
+      "sự đồng thuận",
+      "chuyên gia",
+      "nghiên cứu nhỏ",
+      "nghiên cứu hồi cứu"
+    ],
+    "gold_standard": "Mức chứng cứ C được định nghĩa là sự đồng thuận của các chuyên gia và/hoặc các nghiên cứu nhỏ, các nghiên cứu hồi cứu[cite: 3]."
+  },
+  {
+    "id": "59",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, phân loại huyết áp không tăng là huyết áp có HATT và HATTr là bao nhiêu?",
+    "expected_keywords": [
+      "huyết áp không tăng",
+      "120",
+      "70"
+    ],
+    "gold_standard": "Phân loại huyết áp không tăng là huyết áp có HATT < 120 mmHg và HATTr < 70 mmHg[cite: 3]."
+  },
+  {
+    "id": "60",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, phân loại tiền tăng huyết áp là huyết áp có HATT và HATTr là bao nhiêu?",
+    "expected_keywords": [
+      "tiền tăng huyết áp",
+      "120",
+      "139",
+      "70",
+      "89"
+    ],
+    "gold_standard": "Tiền tăng huyết áp là huyết áp có HATT từ 120-139 mmHg và/hoặc HATTr từ 70-89 mmHg[cite: 3]."
+  },
+  {
+    "id": "61",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, phân loại tăng huyết áp độ 1 là huyết áp có HATT và HATTr là bao nhiêu?",
+    "expected_keywords": [
+      "tăng huyết áp độ 1",
+      "140",
+      "159",
+      "90",
+      "99"
+    ],
+    "gold_standard": "Tăng huyết áp độ 1 là huyết áp có HATT từ 140-159 mmHg và/hoặc HATTr từ 90-99 mmHg[cite: 3]."
+  },
+  {
+    "id": "62",
+    "category": "medical_query",
+    "question": "Theo tài liệu VNHA, phân loại tăng huyết áp độ 2 là huyết áp có HATT và HATTr là bao nhiêu?",
+    "expected_keywords": [
+      "tăng huyết áp độ 2",
+      "160",
+      "100"
+    ],
+    "gold_standard": "Tăng huyết áp độ 2 là huyết áp có HATT từ 160 mmHg trở lên và/hoặc HATTr từ 100 mmHg trở lên[cite: 3]."
+  },
+  {
+    "id": "63",
+    "category": "medical_query",
+    "question": "Tiền THA với Huyết áp tâm thu (SBP) trong khoảng 130–139 mmHg kèm theo các tình trạng nguy cơ cao thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nhóm IIa",
+      "LOE A",
+      "nguy cơ cao"
+    ],
+    "gold_standard": "Thuộc nhóm IIa và LOE A."
+  },
+  {
+    "id": "64",
+    "category": "medical_query",
+    "question": "Tiền THA với Huyết áp tâm thu (SBP) trong khoảng 130–139 mmHg kèm theo các tình trạng nguy cơ thấp trung bình thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nhóm IIb",
+      "LOE C",
+      "nguy cơ thấp"
+    ],
+    "gold_standard": "Thuộc nhóm IIb và LOE: C."
+  },
+  {
+    "id": "65",
+    "category": "medical_query",
+    "question": "Tăng cường điều trị hạ huyết áp để đạt được huyết áp tâm trương trong khoảng 70–79 mmHg nhằm giảm nguy cơ tim mạch (CVD) thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nhóm IIb",
+      "LOE C",
+      "70–79 mmHg"
+    ],
+    "gold_standard": "Thuộc nhóm IIb và LOE: C."
+  },
+  {
+    "id": "66",
+    "category": "medical_query",
+    "question": "Trong quá trình điều trị, nếu huyết áp tâm trương đã đạt hoặc thấp hơn mục tiêu nhưng huyết áp tâm thu chưa đạt (<120-129 mmHg), việc cân nhắc tăng cường điều trị để đạt HATT trong khoảng 120–129 mmHg thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nhóm IIb",
+      "LOE C",
+      "120–129 mmHg"
+    ],
+    "gold_standard": "Thuộc nhóm IIb và LOE: C."
+  },
+  {
+    "id": "67",
+    "category": "medical_query",
+    "question": "Mục tiêu huyết áp có thể hạ thấp đến <120/70 mmHg nếu dung nạp tốt thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nhóm I",
+      "LOE A",
+      "<120/70 mmHg"
+    ],
+    "gold_standard": "Thuộc nhóm I và LOE A."
+  },
+  {
+    "id": "68",
+    "category": "medical_query",
+    "question": "Việc duy trì điều trị bằng thuốc hạ huyết áp suốt đời, ngay cả khi bệnh nhân trên 85 tuổi nếu được dung nạp tốt thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "suốt đời",
+      "85 tuổi",
+      "nhóm I",
+      "LOE A"
+    ],
+    "gold_standard": "Thuộc nhóm I và LOE: A."
+  },
+  {
+    "id": "69",
+    "category": "medical_query",
+    "question": "Các tình trạng nguy cơ cao bao gồm bệnh tim mạch đã được xác định (CVD), đái tháo đường, bệnh thận mạn (CKD) giai đoạn ≥ III thuộc nhóm và LOE nào?",
+    "expected_keywords": [
+      "nguy cơ cao",
+      "nhóm IIa",
+      "LOE A"
+    ],
+    "gold_standard": "Thuộc nhóm IIa và LOE A."
+  },
+  {
+    "id": "70",
+    "category": "medical_query",
+    "question": "Siêu âm tim có phải là phương pháp được sử dụng để phát hiện bệnh thận hay không?",
+    "expected_keywords": [
+      "siêu âm tim",
+      "không",
+      "cấu trúc và chức năng tim"
+    ],
+    "gold_standard": "Không, siêu âm tim được sử dụng để đánh giá cấu trúc và chức năng tim chứ không phải để phát hiện bệnh thận[cite: 3]."
+  },
+  {
+    "id": "71",
+    "category": "medical_query",
+    "question": "Theo các thông số đo lường xác định HMOD, ngưỡng bất thường của chỉ số LVM/BSA ở nam và nữ là bao nhiêu?",
+    "expected_keywords": [
+      "LVM/BSA",
+      "nam",
+      "115",
+      "nữ",
+      "95"
+    ],
+    "gold_standard": "Ngưỡng bất thường của LVM/BSA (g/m²) là Nam > 115 và Nữ > 95[cite: 3]."
+  },
+  {
+    "id": "72",
+    "category": "medical_query",
+    "question": "Để thiết lập kiểm soát huyết áp ổn định, tần suất thăm khám trong 1-3 tháng đầu được khuyến cáo như thế nào?",
+    "expected_keywords": [
+      "thăm khám",
+      "2-4 tuần",
+      "1-3 tháng đầu"
+    ],
+    "gold_standard": "Thăm khám mỗi 2-4 tuần/lần trong 1-3 tháng đầu để đánh giá tác dụng kiểm soát HA ban đầu[cite: 3]."
+  },
+  {
+    "id": "73",
+    "category": "medical_query",
+    "question": "Theo lưu đồ điều trị, việc đánh giá hiệu quả điều trị và tác dụng phụ của thuốc được thực hiện ra sao?",
+    "expected_keywords": [
+      "hỏi bệnh nhân",
+      "tác dụng phụ",
+      "không dung nạp",
+      "thay đổi thuốc"
+    ],
+    "gold_standard": "Bước đánh giá được thực hiện bằng cách hỏi bệnh nhân về tác dụng phụ của thuốc; nếu có tác dụng phụ không dung nạp thì tiến hành thay đổi thuốc hoặc biện pháp hỗ trợ."
+  },
+  {
+    "id": "74",
+    "category": "medical_query",
+    "question": "Trong chiến lược điều trị thuốc và can thiệp, nội dung 'Điều trị cá thể hóa - THUỐC' tương ứng với cụm tiếng Anh nào?",
+    "expected_keywords": [
+      "Assign individualized therapy",
+      "Pharmacological Treatment"
+    ],
+    "gold_standard": "Tương ứng với cụm tiếng Anh là 'Assign individualized therapy: —Pharmacological Treatment'."
+  },
+  {
+    "id": "75",
+    "category": "medical_query",
+    "question": "Theo nội dung STT 10 trong chiến lược điều trị thuốc và can thiệp, nguyên tắc kết hợp thuốc được quy định như thế nào?",
+    "expected_keywords": [
+      "ưu tiên",
+      "kết hợp",
+      "đôi liệu thấp",
+      "A,C,D"
+    ],
+    "gold_standard": "Ưu tiên kết hợp đôi liệu thấp A,C,D."
+  },
+  {
+    "id": "76",
+    "category": "medical_query",
+    "question": "Theo Bảng 11, ngưỡng bất thường của chỉ số Sokolow-Lyon (Sv1 + Sv5) để xác định phì đại tâm thất trái là bao nhiêu?",
+    "expected_keywords": [
+      "Sokolow-Lyon",
+      "35 mm",
+      "phì đại tâm thất trái"
+    ],
+    "gold_standard": "Ngưỡng bất thường của chỉ số Sokolow-Lyon (Sv1 + Sv5) là > 35 mm."
+  },
+  {
+    "id": "77",
+    "category": "medical_query",
+    "question": "Điện tâm đồ 12 chuyển đạo trong các sàng lọc cơ bản được sử dụng để làm gì?",
+    "expected_keywords": [
+      "Điện tâm đồ 12 chuyển đạo",
+      "sàng lọc cơ bản",
+      "sàng lọc DTT",
+      "bất thường tần số",
+      "nhịp tim"
+    ],
+    "gold_standard": "Điện tâm đồ 12 chuyển đạo được sử dụng như một sàng lọc cơ bản để sàng lọc DTT (phát hiện bất thường tần số hoặc nhịp tim) và các bất thường tim mạch khác."
+  },
+  {
+    "id": "78",
+    "category": "medical_query",
+    "question": "Xét nghiệm Haemoglobin và/hoặc haematocrit được sử dụng để sàng lọc những vấn đề gì?",
+    "expected_keywords": [
+      "Haemoglobin",
+      "haematocrit",
+      "ĐTĐ",
+      "rối loạn điện giải",
+      "mỡ máu",
+      "thiếu máu"
+    ],
+    "gold_standard": "Haemoglobin và/hoặc haematocrit được sử dụng để sàng lọc ĐTĐ, rối loạn điện giải, mỡ máu và thiếu máu."
+  },
+  {
+    "id": "79",
+    "category": "medical_query",
+    "question": "Tỉ lệ albumin:creatinine nước tiểu được sử dụng để sàng lọc và phát hiện tình trạng gì?",
+    "expected_keywords": [
+      "albumin:creatinine nước tiểu",
+      "gia tăng đào thải albumin",
+      "bệnh thận"
+    ],
+    "gold_standard": "Tỉ lệ albumin:creatinine nước tiểu được sử dụng để sàng lọc và phát hiện sự gia tăng đào thải albumin có khả năng là bệnh thận."
+  },
+  {
+    "id": "80",
+    "category": "medical_query",
+    "question": "Siêu âm tim sàng lọc cái gì?",
+    "expected_keywords": [
+      "siêu âm tim",
+      "cấu trúc",
+      "chức năng tim",
+      "quyết định điều trị"
+    ],
+    "gold_standard": "Siêu âm tim giúp bác sĩ đánh giá cấu trúc và chức năng tim, từ đó quyết định điều trị phù hợp cho bệnh nhân."
+  },
+  {
+    "id": "81",
+    "category": "medical_query",
+    "question": "Siêu âm động mạch (ĐM) Cảnh được sử dụng để xác định điều gì?",
+    "expected_keywords": [
+      "siêu âm ĐM Cảnh",
+      "mãng vữa",
+      "chít hẹp"
+    ],
+    "gold_standard": "Siêu âm ĐM Cảnh được sử dụng để xác định sự hiện diện mãng vữa hoặc chít hẹp."
+  },
+  {
+    "id": "82",
+    "category": "medical_query",
+    "question": "Chỉ số cẳng chân cổ tay (ABI) được sử dụng để sàng lọc bệnh lý gì?",
+    "expected_keywords": [
+      "ABI",
+      "cẳng chân cổ tay",
+      "bệnh mạch máu ngoại biên"
+    ],
+    "gold_standard": "Chỉ số cẳng chân cổ tay (ABI) được sử dụng để sàng lọc bệnh mạch máu ngoại biên."
+  },
+  {
+    "id": "83",
+    "category": "medical_query",
+    "question": "Sử dụng cánh tay có huyết áp cao hơn nếu có sự chênh lệch: Nếu phát hiện chênh lệch >10 mmHg giữa hai tay, các lần đo huyết áp tiếp theo nên sử dụng cánh tay có chỉ số cao hơn thuộc nhóm và loe nào",
+    "expected_keywords": [
+      "nhóm I",
+      "LOE B",
+      "chênh lệch >10 mmHg"
+    ],
+    "gold_standard": "Thuộc nhóm I và LOE B."
+  },
+  {
+    "id": "84",
+    "category": "medical_query",
+    "question": "Đo HANPK cho việc quản lý lâu dài: Khuyến cáo để định lượng hiệu quả điều trị, hướng dẫn điều chỉnh liều thuốc huyết áp và/hoặc xác định nguyên nhân của tác dụng phụ (ví dụ: hạ huyết áp triệu chứng). thuộc nhóm và loe nào",
+    "expected_keywords": [
+      "quản lý lâu dài",
+      "nhóm I",
+      "LOE B"
+    ],
+    "gold_standard": "Thuộc nhóm I và LOE B."
+  },
+  {
+    "id": "85",
+    "category": "medical_query",
+    "question": "Các chỉ số huyết áp khác. Các chỉ số khác như áp lực mạch, biến thiên huyết áp, và huyết áp khiu gắng sức có thể được xem xét thuộc nhóm và loe mấy",
+    "expected_keywords": [
+      "áp lực mạch",
+      "biến thiên huyết áp",
+      "huyết áp khi gắng sức",
+      "nhóm IIb",
+      "LOE C"
+    ],
+    "gold_standard": "Thuộc nhóm IIb và LOE C."
+  },
+  {
+    "id": "86",
+    "category": "medical_query",
+    "question": "Đo HANPK (đặc biệt HALĐ). Đánh giá huyết áp về đêm, non dipper, nghịch đảo (rise), THA buổi sáng, vọt buổi sáng, THA ban đêm ẩn giấu thuộc nhóm và loe nào",
+    "expected_keywords": [
+      "HALĐ",
+      "non dipper",
+      "THA ban đêm ẩn giấu",
+      "nhóm IIa",
+      "LOE C"
+    ],
+    "gold_standard": "Thuộc nhóm IIa và LOE C."
+  },
+  {
+    "id": "87",
+    "category": "medical_query",
+    "question": "Sử dụng thiết bị do huyệt áp đã được kiểm định và hiệu chuẩn, thực hiện kỹ thuật đo chính xác và áp dụng phương pháp đo huyết áp nhất quán cho từng bệnh nhân thuộc nhóm và loe nào",
+    "expected_keywords": [
+      "nhóm I",
+      "LOE B",
+      "thiết bị đo huyết áp"
+    ],
+    "gold_standard": "Thuộc nhóm I và LOE B."
+  },
+  {
+    "id": "88",
+    "category": "medical_query",
+    "question": "Rào cản về Nhận thức/ Cảm xúc trong Bảng 6.Các rào cản đối với bệnh nhân",
+    "expected_keywords": [
+      "Nhận thức",
+      "Cảm xúc",
+      "thiếu kiến thức",
+      "rối loạn thần kinh"
+    ],
+    "gold_standard": "Bao gồm thiếu kiến thức về tăng huyết áp, thiếu hiểu biết về tự đo huyết áp, các rối loạn thần kinh tâm lý ảnh hưởng đến nhận thức, lạm dụng chất kích thích, trình độ hiểu biết y tế thấp và hạn chế về khả năng sử dụng công nghệ kỹ thuật số."
+  },
+  {
+    "id": "89",
+    "category": "medical_query",
+    "question": "Rào cản về hành vi của Các rào cản đối với bệnh nhân",
+    "expected_keywords": [
+      "hành vi",
+      "thói quen sinh hoạt",
+      "không tuân thủ",
+      "đơn thuốc"
+    ],
+    "gold_standard": "Bao gồm khó khăn trong việc thay đổi thói quen sinh hoạt theo khuyến nghị và không tuân thủ đúng theo đơn thuốc được kê để điều trị tăng huyết áp."
+  },
+  {
+    "id": "90",
+    "category": "medical_query",
+    "question": "Chiến lược thực hành lâm sàng: 'Lộ trình chiến lược' - 5Đ với 5 bước cơ bản",
+    "expected_keywords": [
+      "Đo HA",
+      "Đánh giá",
+      "Điều trị cá thể hóa",
+      "Tự theo dõi",
+      "Đặt bệnh nhân làm trung tâm"
+    ],
+    "gold_standard": "Bao gồm 5 bước cơ bản: Đo HA chẩn đoán chính xác THA; Đánh giá bệnh nhân toàn diện; Điều trị cá thể hóa linh hoạt; Tự theo dõi đáp ứng điều trị và kiên định tuân thủ; Đặt bệnh nhân làm trung tâm, cùng tham gia quyết định trong việc quản lý sức khỏe của họ."
+  }
+]

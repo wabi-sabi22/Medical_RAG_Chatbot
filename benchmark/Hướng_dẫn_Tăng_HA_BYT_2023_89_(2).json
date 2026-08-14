@@ -1,0 +1,921 @@
+[
+  {
+    "id": "1",
+    "category": "medical_query",
+    "question": "Trong Hình 1, nếu huyết áp phòng khám ở lần khám thứ 3 nằm trong khoảng 130-139/85-89 mmHg, kết quả phân loại là gì?",
+    "expected_keywords": [
+      "HA bình thường-cao",
+      "Huyết áp bình thường-cao"
+    ],
+    "gold_standard": "Theo sơ đồ chẩn đoán thiết yếu, nếu khám huyết áp phòng khám lần 3 ở mức 130-139/85-89 mmHg thì được phân loại là HA bình thường-cao."
+  },
+  {
+    "id": "2",
+    "category": "medical_query",
+    "question": "Dựa vào sơ đồ Hình 1, huyết áp ban ngày đo liên tục (HALT) dưới bao nhiêu thì được coi là bình thường để phân biệt với THA ẩn giấu?",
+    "expected_keywords": [
+      "< 135/85",
+      "135",
+      "85"
+    ],
+    "gold_standard": "Theo tiêu chuẩn tối ưu trong sơ đồ Hình 1, HA ban ngày đo liên tục cần < 135/85 mmHg (và HA 24h < 130/80 mmHg) để kết luận không bị THA ẩn giấu."
+  },
+  {
+    "id": "3",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 2, bệnh nhân THA Độ 1 (140-159/90-99 mmHg) nếu có từ 3 yếu tố nguy cơ trở lên thì được xếp vào nhóm nguy cơ nào?",
+    "expected_keywords": [
+      "Cao",
+      "Nguy cơ cao"
+    ],
+    "gold_standard": "Bệnh nhân THA Độ 1 có từ 3 yếu tố nguy cơ trở lên được phân tầng vào nhóm nguy cơ Cao theo Bảng 2."
+  },
+  {
+    "id": "4",
+    "category": "medical_query",
+    "question": "Trong Bảng 2, nhóm bệnh nhân có tổn thương cơ quan đích, bệnh thận mạn giai đoạn >3, đái tháo đường hoặc bệnh tim mạch được phân tầng nguy cơ như thế nào ở mọi mức huyết áp?",
+    "expected_keywords": [
+      "Cao",
+      "Nguy cơ cao"
+    ],
+    "gold_standard": "Theo Bảng 2, nhóm bệnh nhân có các đặc điểm trên (tổn thương cơ quan đích, BTM GĐ >3, ĐTĐ, bệnh tim mạch) đều được xếp vào nhóm nguy cơ Cao bất kể mức huyết áp (Bình thường cao, Độ 1 hay Độ 2)."
+  },
+  {
+    "id": "5",
+    "category": "medical_query",
+    "question": "Theo Bảng 3 về khuyến cáo đo huyết áp tại nhà, phương pháp nào được ưu tiên sử dụng (mức chứng cứ C, loại I)?",
+    "expected_keywords": [
+      "máy đo HA cánh tay",
+      "dao động kế",
+      "cánh tay"
+    ],
+    "gold_standard": "Bảng 3 khuyến cáo ưu tiên sử dụng máy đo HA cánh tay theo dao động kế để theo dõi huyết áp tại nhà."
+  },
+  {
+    "id": "6",
+    "category": "medical_query",
+    "question": "Theo Bảng 3, việc tầm soát THA ẩn giấu bằng HATN được khuyến cáo (loại IIa) khi huyết áp phòng khám ở mức nào?",
+    "expected_keywords": [
+      "< 130/80",
+      "130",
+      "80"
+    ],
+    "gold_standard": "Khuyến cáo để tầm soát THA ẩn giấu bằng HATN khi HAPK < 130/80 mmHg và HATN > 135/85 mmHg."
+  },
+  {
+    "id": "7",
+    "category": "medical_query",
+    "question": "Theo Hình 2, thời gian dự kiến để đạt được đích kiểm soát huyết áp (ranh giới đích) là bao lâu sau khi điều trị thuốc?",
+    "expected_keywords": [
+      "3 - 6 tháng",
+      "1 - 3 tháng"
+    ],
+    "gold_standard": "Hình 2 chỉ ra thời gian đạt đích kiểm soát HA là trong 3 - 6 tháng đối với THA không có bệnh đồng mắc và trong 1 - 3 tháng đối với THA có bệnh đồng mắc."
+  },
+  {
+    "id": "8",
+    "category": "medical_query",
+    "question": "Trong sơ đồ Hình 3 (Chiến lược thiết yếu), nếu bệnh nhân bị HA bình thường cao kèm nguy cơ cao, phương pháp điều trị khởi đầu là gì?",
+    "expected_keywords": [
+      "PHỐI HỢP 2 THUỐC",
+      "liều thấp"
+    ],
+    "gold_standard": "Sơ đồ Hình 3 hướng dẫn khởi đầu bằng việc PHỐI HỢP 2 THUỐC SẴN CÓ TỪ LIỀU THẤP ĐẾN LIỀU THÔNG THƯỜNG."
+  },
+  {
+    "id": "9",
+    "category": "medical_query",
+    "question": "Trong Hình 4 (Sơ đồ điều trị tối ưu), để tăng cường tuân thủ, sự phối hợp 2 thuốc (A+C hoặc D) nên được đóng gói như thế nào?",
+    "expected_keywords": [
+      "1 viên",
+      "viên phối hợp"
+    ],
+    "gold_standard": "Sơ đồ Hình 4 tối ưu khuyến cáo dùng dạng 1 viên phối hợp (liều cố định) từ liều thấp đến liều thông thường."
+  },
+  {
+    "id": "10",
+    "category": "medical_query",
+    "question": "Theo Bảng 8, mức tiêu thụ đồ uống có cồn giảm xuống có thể giúp giảm HATT khoảng bao nhiêu ở người có THA?",
+    "expected_keywords": [
+      "-4",
+      "4 mmHg"
+    ],
+    "gold_standard": "Giảm sử dụng đồ uống có cồn có thể giúp giảm HATT khoảng -4 mmHg ở người có THA."
+  },
+  {
+    "id": "11",
+    "category": "medical_query",
+    "question": "Bảng 10 liệt kê liều dùng của Amlodipine. Liều thấp và liều thông thường-tối đa của Amlodipine là bao nhiêu?",
+    "expected_keywords": [
+      "2.5",
+      "5-10"
+    ],
+    "gold_standard": "Theo Bảng 10, liều thấp của Amlodipine là 2.5 mg/ngày, và liều thông thường-tối đa là 5-10 mg/ngày."
+  },
+  {
+    "id": "12",
+    "category": "medical_query",
+    "question": "Trong Bảng 11, tăng canxi máu và hạ kali máu là chống chỉ định bắt buộc của nhóm thuốc hạ áp nào?",
+    "expected_keywords": [
+      "Lợi tiểu",
+      "thiazides",
+      "thiazides-like"
+    ],
+    "gold_standard": "Tăng canxi máu và hạ kali máu là chống chỉ định bắt buộc của nhóm Lợi tiểu (thiazides / thiazides-like)."
+  },
+  {
+    "id": "13",
+    "category": "medical_query",
+    "question": "Theo Bảng 11, Gút là chống chỉ định bắt buộc đối với nhóm thuốc nào?",
+    "expected_keywords": [
+      "Lợi tiểu",
+      "thiazides"
+    ],
+    "gold_standard": "Gút là chống chỉ định bắt buộc đối với thuốc Lợi tiểu (thiazides / thiazides-like)."
+  },
+  {
+    "id": "14",
+    "category": "medical_query",
+    "question": "Trong Hình 5 (Chiến lược phối hợp thuốc), lợi tiểu Thiazide-like có được ưu tiên hơn lợi tiểu Thiazide không?",
+    "expected_keywords": [
+      "Có",
+      "ưu tiên hơn"
+    ],
+    "gold_standard": "Có, theo ghi chú trong Hình 5, Lợi tiểu Thiazide - like được ưu tiên hơn lợi tiểu Thiazides."
+  },
+  {
+    "id": "15",
+    "category": "medical_query",
+    "question": "Theo Bảng 12 (Cách tiếp cận THA do mạch máu thận), nguyên nhân 'Loạn sản cơ' thường gặp ở đối tượng nào?",
+    "expected_keywords": [
+      "nữ giới",
+      "30-50",
+      "nữ"
+    ],
+    "gold_standard": "Loạn sản cơ (hay loạn sản sợi cơ) thường gặp ở nữ giới, tuổi khởi phát từ 30-50 tuổi."
+  },
+  {
+    "id": "16",
+    "category": "medical_query",
+    "question": "Cũng theo Bảng 12, phương pháp chẩn đoán xác định cho tình trạng hẹp eo động mạch chủ (Coarctation) là gì?",
+    "expected_keywords": [
+      "Chụp CT mạch",
+      "CT mạch"
+    ],
+    "gold_standard": "Phương pháp chẩn đoán xác định cho hẹp eo động mạch chủ (Coarctation) là Chụp CT mạch."
+  },
+  {
+    "id": "17",
+    "category": "medical_query",
+    "question": "Trong Bảng 14, điều trị ưu tiên cho bệnh não do tăng huyết áp là thuốc gì?",
+    "expected_keywords": [
+      "Labetalol",
+      "Nicardipine"
+    ],
+    "gold_standard": "Theo Bảng 14, thuốc điều trị ưu tiên cho bệnh não do tăng huyết áp là Labetalol; Nicardipine."
+  },
+  {
+    "id": "18",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 14, mục tiêu hạ huyết áp ngay lập tức trong trường hợp phù phổi cấp do tim là đưa HATT xuống dưới mức nào?",
+    "expected_keywords": [
+      "< 140",
+      "140"
+    ],
+    "gold_standard": "Mục tiêu là hạ ngay lập tức HATT < 140 mmHg."
+  },
+  {
+    "id": "19",
+    "category": "medical_query",
+    "question": "Trong Bảng 16, các lựa chọn thuốc đầu tiên (đường uống) để điều trị THA nhẹ trong thai kỳ là gì?",
+    "expected_keywords": [
+      "methyldopa",
+      "Labetalol",
+      "Nifedipine",
+      "Nicardipine"
+    ],
+    "gold_standard": "Các lựa chọn đầu tiên bao gồm: methyldopa, chẹn beta (Labetalol), và chẹn kênh canxi dihydropyridine (Nifedipine [trừ dạng viên nang], Nicardipine)."
+  },
+  {
+    "id": "20",
+    "category": "medical_query",
+    "question": "Theo Bảng 16, việc chấm dứt thai kỳ được khuyến cáo ở tuần thứ bao nhiêu nếu thai phụ bị tiền sản giật nhưng không có triệu chứng nặng?",
+    "expected_keywords": [
+      "37",
+      "tuần 37"
+    ],
+    "gold_standard": "Chấm dứt thai kỳ được khuyến cáo ở tuần thứ 37 nếu không có triệu chứng."
+  },
+  {
+    "id": "21",
+    "category": "medical_query",
+    "question": "Theo sơ đồ Hình 6, đối với người >80 tuổi có 'Bảo tồn chức năng thể chất và tâm thần', mức HATT mục tiêu là bao nhiêu?",
+    "expected_keywords": [
+      "120 - 140",
+      "120",
+      "140"
+    ],
+    "gold_standard": "Theo Hình 6, huyết áp mục tiêu tương tự người trưởng thành là HATT 120 - 140 mmHg."
+  },
+  {
+    "id": "22",
+    "category": "medical_query",
+    "question": "Dựa vào Hình 6, với bệnh nhân >80 tuổi bị 'Giảm chức năng đáng kể' hoặc 'Kỳ vọng sống thấp', số lượng thuốc hạ áp phối hợp nên tránh dùng nhiều hơn bao nhiêu loại cùng lúc?",
+    "expected_keywords": [
+      "3 loại",
+      "3"
+    ],
+    "gold_standard": "Sơ đồ khuyên tránh dùng nhiều hơn 3 loại thuốc cùng lúc ở những bệnh nhân có chức năng giảm đáng kể hoặc kỳ vọng sống thấp."
+  },
+  {
+    "id": "23",
+    "category": "medical_query",
+    "question": "Theo Bảng 20, ở những bệnh nhân THA có suy tim EF bảo tồn (HFpEF), các thuốc nào được khuyến cáo để giảm nguy cơ nhập viện (loại IIb, mức chứng cứ B)?",
+    "expected_keywords": [
+      "ARNI",
+      "Kháng Aldosterone",
+      "CTTA"
+    ],
+    "gold_standard": "ARNI, Kháng Aldosterone, và CTTA được khuyến cáo để giảm nguy cơ nhập viện do suy tim ở bệnh nhân HFpEF."
+  },
+  {
+    "id": "24",
+    "category": "medical_query",
+    "question": "Trong Bảng 22, thuốc nào được chọn đầu tay để điều trị tăng huyết áp ở bệnh nhân sau khi ghép thận?",
+    "expected_keywords": [
+      "CKCa Dihydropyridine",
+      "CTTA"
+    ],
+    "gold_standard": "CKCa Dihydropyridine hoặc CTTA là thuốc được chọn đầu tay ở bệnh nhân ghép thận."
+  },
+  {
+    "id": "25",
+    "category": "medical_query",
+    "question": "Theo Bảng 23, đối với bệnh nhân xuất huyết não cấp có HATT > 220 mmHg, khuyến cáo điều trị hạ HA là bằng đường nào?",
+    "expected_keywords": [
+      "truyền tĩnh mạch",
+      "tĩnh mạch"
+    ],
+    "gold_standard": "Cần xem xét điều trị hạ HA bằng thuốc truyền tĩnh mạch và theo dõi HA chặt chẽ."
+  },
+  {
+    "id": "26",
+    "category": "medical_query",
+    "question": "Theo Bảng 24, ở bệnh nhân đột quỵ thiếu máu cục bộ (TMCB) cấp đang truyền Alteplase (tiêu sợi huyết), HA cần được duy trì ở mức nào trước khi bolus?",
+    "expected_keywords": [
+      "< 180/110"
+    ],
+    "gold_standard": "HA cần được duy trì ở mức < 180/110 mmHg trước bolus thuốc tiêu sợi huyết."
+  },
+  {
+    "id": "27",
+    "category": "medical_query",
+    "question": "Theo Bảng 10, liều thấp của thuốc chẹn beta Bisoprolol là bao nhiêu?",
+    "expected_keywords": [
+      "5",
+      "5 mg"
+    ],
+    "gold_standard": "Theo Bảng 10, liều thấp của Bisoprolol là 5 mg."
+  },
+  {
+    "id": "28",
+    "category": "medical_query",
+    "question": "Theo Hình 3, đối với bệnh nhân trên 80 tuổi hoặc có hội chứng lão hóa và HA bình thường cao nguy cơ thấp/trung bình, có thể xem xét phác đồ nào sau 3-6 tháng thay đổi lối sống không đạt mục tiêu?",
+    "expected_keywords": [
+      "đơn trị liệu",
+      "đơn trị"
+    ],
+    "gold_standard": "Trong ghi chú Hình 3, có thể xem xét đơn trị liệu ở đối tượng này thay vì phối hợp thuốc ngay."
+  },
+  {
+    "id": "29",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 13, xét nghiệm nào được khuyến cáo để sàng lọc cường aldosterone nguyên phát ở người lớn (Mức chứng cứ C)?",
+    "expected_keywords": [
+      "aldosterone huyết thanh",
+      "tỷ lệ renin hoạt động",
+      "renin"
+    ],
+    "gold_standard": "Định lượng aldosterone huyết thanh: tỷ lệ renin hoạt động được khuyến cáo dùng để sàng lọc."
+  },
+  {
+    "id": "30",
+    "category": "medical_query",
+    "question": "Trong Bảng 16 về chăm sóc sau sinh, tại sao thuốc Methyldopa bị loại trừ (tránh dùng) đối với thai phụ có HA cao tiếp diễn?",
+    "expected_keywords": [
+      "trầm cảm sau sinh"
+    ],
+    "gold_standard": "Tránh dùng Methyldopa vì thuốc này có nguy cơ gây trầm cảm sau sinh."
+  },
+  {
+    "id": "31",
+    "category": "medical_query",
+    "question": "Cũng theo Bảng 16, những loại thuốc hạ áp nào cần tránh sử dụng trong thời kỳ cho con bú do nồng độ bài tiết vào sữa cao?",
+    "expected_keywords": [
+      "Atenolol",
+      "Propranolol",
+      "Nifedipine"
+    ],
+    "gold_standard": "Cần tránh sử dụng Atenolol, Propranolol và Nifedipine vì có nồng độ cao trong sữa mẹ."
+  },
+  {
+    "id": "32",
+    "category": "medical_query",
+    "question": "Dựa vào Hình 1, nếu huyết áp phòng khám lần 1 đạt mức ≥180/120 mmHg nhưng bệnh nhân KHÔNG có bằng chứng tổn thương cơ quan đích, bước tiếp theo cần làm là gì?",
+    "expected_keywords": [
+      "Đo HA PK lần 2",
+      "Đo huyết áp phòng khám lần 2"
+    ],
+    "gold_standard": "Theo sơ đồ Hình 1, nếu bệnh nhân có huyết áp ≥180/120 mmHg nhưng không có bằng chứng tổn thương cơ quan đích, bệnh nhân sẽ được Đo HA PK lần 2."
+  },
+  {
+    "id": "33",
+    "category": "medical_query",
+    "question": "Trong Bảng 1, phân loại huyết áp bình thường yêu cầu mức huyết áp tâm thu và tâm trương như thế nào?",
+    "expected_keywords": [
+      "< 130",
+      "< 85"
+    ],
+    "gold_standard": "Theo Bảng 1, huyết áp bình thường được phân loại khi huyết áp tâm thu < 130 mmHg và huyết áp tâm trương < 85 mmHg."
+  },
+  {
+    "id": "34",
+    "category": "medical_query",
+    "question": "Định nghĩa tăng huyết áp tâm thu đơn độc trong Bảng 1 là như thế nào?",
+    "expected_keywords": [
+      ">= 140",
+      "< 90"
+    ],
+    "gold_standard": "Theo Bảng 1, tăng huyết áp tâm thu đơn độc được chẩn đoán khi HA tâm thu ≥ 140 mmHg và HA tâm trương < 90 mmHg."
+  },
+  {
+    "id": "35",
+    "category": "medical_query",
+    "question": "Theo Bảng 2, nếu bệnh nhân có THA Độ 2 (HATT ≥ 160 hoặc HATTr ≥ 100) nhưng không có yếu tố nguy cơ nào thì thuộc nhóm nguy cơ nào?",
+    "expected_keywords": [
+      "Trung bình",
+      "Nguy cơ Trung bình"
+    ],
+    "gold_standard": "Bệnh nhân có THA Độ 2 mà không có yếu tố nguy cơ nào được phân tầng vào nhóm nguy cơ Trung bình theo Bảng 2."
+  },
+  {
+    "id": "36",
+    "category": "medical_query",
+    "question": "Trong Bảng 2, một bệnh nhân THA Độ 2 kèm theo 1 hoặc 2 yếu tố nguy cơ sẽ được xếp vào phân tầng nguy cơ nào?",
+    "expected_keywords": [
+      "Cao",
+      "Nguy cơ cao"
+    ],
+    "gold_standard": "Bệnh nhân THA Độ 2 kèm theo 1 hoặc 2 yếu tố nguy cơ được Bảng 2 xếp vào nhóm nguy cơ Cao."
+  },
+  {
+    "id": "37",
+    "category": "medical_query",
+    "question": "Bảng 3 đưa ra mức chứng cứ và loại khuyến cáo nào cho việc HATN giúp tiên lượng kết cục tim mạch tốt hơn so với HAPK?",
+    "expected_keywords": [
+      "Loại I",
+      "Mức B",
+      "chứng cứ B"
+    ],
+    "gold_standard": "Theo Bảng 3, việc HATN giúp tiên lượng kết cục tim mạch tốt hơn so với HAPK được xếp vào Khuyến cáo Loại I, Mức chứng cứ B."
+  },
+  {
+    "id": "38",
+    "category": "medical_query",
+    "question": "Theo Bảng 3, việc theo dõi HATN ở bệnh nhân THA áo choàng trắng nhằm mục đích gì?",
+    "expected_keywords": [
+      "chuyển sang THA mạn tính",
+      "THA mạn tính"
+    ],
+    "gold_standard": "HATN được khuyến cáo theo dõi ở bệnh nhân THA áo choàng trắng nhằm xác định tình trạng chuyển sang THA mạn tính."
+  },
+  {
+    "id": "39",
+    "category": "medical_query",
+    "question": "Trong Bảng 4, ở người trưởng thành chưa điều trị có HATT 130-159 hoặc HATTr 80-99, khuyến cáo gì nên thực hiện trước khi bắt đầu dùng thuốc?",
+    "expected_keywords": [
+      "sàng lọc hiệu ứng áo choàng trắng",
+      "HATN",
+      "HALT"
+    ],
+    "gold_standard": "Bảng 4 khuyến cáo cần sàng lọc hiệu ứng áo choàng trắng bằng HATN hoặc HALT trước khi tiến hành điều trị bằng thuốc đối với nhóm này."
+  },
+  {
+    "id": "40",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 4, việc kiểm soát chặt HATN ở mức HATT <125 mmHg được khuyến cáo đặc biệt cho nhóm đối tượng nào?",
+    "expected_keywords": [
+      "châu Á",
+      "nguy cơ tim mạch cao",
+      "bệnh đồng mắc"
+    ],
+    "gold_standard": "Mục tiêu HATT <125 mmHg chỉ được khuyến cáo cho bệnh nhân châu Á có nguy cơ tim mạch cao, đặc biệt có bệnh đồng mắc như đái tháo đường, bệnh thận mạn."
+  },
+  {
+    "id": "41",
+    "category": "medical_query",
+    "question": "Theo Bảng 6, ngưỡng huyết áp tâm thu (HATT) cần điều trị thuốc cho bệnh nhân 18-69 tuổi CÓ kèm bệnh đồng mắc là bao nhiêu?",
+    "expected_keywords": [
+      ">= 130",
+      "130"
+    ],
+    "gold_standard": "Ngưỡng HATT cần điều trị thuốc cho nhóm bệnh nhân từ 18-69 tuổi có kèm bệnh đồng mắc là ≥ 130 mmHg theo Bảng 6."
+  },
+  {
+    "id": "42",
+    "category": "medical_query",
+    "question": "Ghi chú trong Bảng 7 về đích HATTr ở bệnh nhân > 65 tuổi bị THA kèm Đái tháo đường týp 2 hoặc Bệnh mạch vành chưa được tái tưới máu là bao nhiêu?",
+    "expected_keywords": [
+      "70 - 79",
+      "70",
+      "79"
+    ],
+    "gold_standard": "Đích HATTr đặc biệt ở nhóm bệnh nhân này là từ 70 - 79mmHg."
+  },
+  {
+    "id": "43",
+    "category": "medical_query",
+    "question": "Theo chú thích trong Hình 2, ranh giới đích HATT 24 giờ của ACC/AHA 2017 là bao nhiêu, để được xem là tương đương với đích huyết áp phòng khám <130 mmHg?",
+    "expected_keywords": [
+      "<125",
+      "125"
+    ],
+    "gold_standard": "Chú thích của Hình 2 chỉ ra rằng đích HATT phòng khám <130 mmHg tương đương với đích HATT 24 giờ <125 mmHg."
+  },
+  {
+    "id": "44",
+    "category": "medical_query",
+    "question": "Theo ghi chú trong Hình 3, các cách xem xét tăng liều nếu huyết áp không được kiểm soát khi đang phối hợp liều thấp là gì?",
+    "expected_keywords": [
+      "Thấp + thông thường",
+      "thông thường + thông thường",
+      "phối hợp 3 thuốc"
+    ],
+    "gold_standard": "Nếu không kiểm soát, có thể xem xét tăng liều theo các hướng: Thấp + thông thường, thông thường + thông thường, hoặc phối hợp 3 thuốc liều cố định sớm."
+  },
+  {
+    "id": "45",
+    "category": "medical_query",
+    "question": "Theo Bảng 8, tập gắng sức có đề kháng động (như nâng tạ hoặc tập chạy) được khuyến cáo thực hiện với tần suất ít nhất bao nhiêu lần mỗi tuần?",
+    "expected_keywords": [
+      "2-3 lần/tuần",
+      "2-3"
+    ],
+    "gold_standard": "Tập gắng sức có đề kháng động được khuyến cáo ít nhất 2-3 lần/tuần trong Bảng 8."
+  },
+  {
+    "id": "46",
+    "category": "medical_query",
+    "question": "Bảng 8 ghi nhận tập gắng sức có đề kháng bất động (ví dụ như tập tay nắm) giúp làm giảm mức HATT khoảng bao nhiêu mmHg ở người bị THA?",
+    "expected_keywords": [
+      "-4",
+      "4 mmHg"
+    ],
+    "gold_standard": "Biện pháp tập gắng sức có đề kháng bất động có thể làm giảm HATT khoảng -4 mmHg ở người bị THA."
+  },
+  {
+    "id": "47",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 10, liều thông thường đến liều tối đa của thuốc Nifedipine là bao nhiêu?",
+    "expected_keywords": [
+      "30-90",
+      "30",
+      "90"
+    ],
+    "gold_standard": "Theo Bảng 10, liều thông thường - tối đa của Nifedipine là từ 30-90 mg/ngày."
+  },
+  {
+    "id": "48",
+    "category": "medical_query",
+    "question": "Theo Bảng 10, Spironolactone thuộc nhóm lợi tiểu giữ Kali có liều thông thường - tối đa là bao nhiêu?",
+    "expected_keywords": [
+      "25-50",
+      "25",
+      "50"
+    ],
+    "gold_standard": "Liều thông thường - tối đa của Spironolactone theo Bảng 10 là 25-50 mg/ngày."
+  },
+  {
+    "id": "49",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 11, nhóm thuốc Ức chế men chuyển (UCMC) có chống chỉ định tương đối với đối tượng nào?",
+    "expected_keywords": [
+      "Phụ nữ trong độ tuổi sinh sản",
+      "không sử dụng biện pháp tránh thai"
+    ],
+    "gold_standard": "Chống chỉ định tương đối của UCMC theo Bảng 11 là đối với Phụ nữ trong độ tuổi sinh sản không sử dụng biện pháp tránh thai."
+  },
+  {
+    "id": "50",
+    "category": "medical_query",
+    "question": "Theo Bảng 12, phương pháp điều trị cho bệnh nhân bị Bệnh xơ vữa động mạch thận một bên là gì?",
+    "expected_keywords": [
+      "điều trị nội khoa",
+      "chẹn hệ renin angiotensin",
+      "kiểm soát yếu tố nguy cơ"
+    ],
+    "gold_standard": "Bảng 12 nêu rõ điều trị bệnh một bên là điều trị nội khoa sử dụng liệu pháp chẹn hệ renin angiotensin và kiểm soát yếu tố nguy cơ tim mạch."
+  },
+  {
+    "id": "51",
+    "category": "medical_query",
+    "question": "Trong Bảng 12, tình trạng hẹp eo động mạch chủ (Coarctation) thường có triệu chứng khởi phát tăng huyết áp mạnh mẽ ở giai đoạn tuổi nào?",
+    "expected_keywords": [
+      "trước 30 tuổi",
+      "30 tuổi"
+    ],
+    "gold_standard": "Khởi phát tăng huyết áp của chứng hẹp eo động mạch chủ thường xảy ra trước 30 tuổi theo Bảng 12."
+  },
+  {
+    "id": "52",
+    "category": "medical_query",
+    "question": "Theo Bảng 13, tình trạng hạ kali máu (dù là ngẫu phát hay thật sự do dùng lợi tiểu) là một dấu hiệu để khuyến cáo sàng lọc bệnh lý gì?",
+    "expected_keywords": [
+      "cường aldosteron nguyên phát"
+    ],
+    "gold_standard": "Hạ kali máu là một trong những tình trạng mà Bảng 13 khuyến cáo cần tiến hành sàng lọc cường aldosteron nguyên phát."
+  },
+  {
+    "id": "53",
+    "category": "medical_query",
+    "question": "Trong Bảng 14, để điều trị Sản giật và Tiền sản giật nặng (HELLP), phác đồ thuốc ưu tiên truyền tĩnh mạch là gì?",
+    "expected_keywords": [
+      "Labetalol",
+      "Nicardipine",
+      "Magnesium sulfate",
+      "Magiê"
+    ],
+    "gold_standard": "Thuốc ưu tiên để điều trị sản giật và tiền sản giật nặng là Labetalol hoặc Nicardipine và Magnesium sulfate theo Bảng 14."
+  },
+  {
+    "id": "54",
+    "category": "medical_query",
+    "question": "Dựa vào Bảng 15, phân loại 'THA từ trước' ở phụ nữ mang thai được xác định khi tăng huyết áp xuất hiện trước thời điểm nào của thai kỳ?",
+    "expected_keywords": [
+      "trước tuần lễ thứ 20",
+      "trước tuần thứ 20"
+    ],
+    "gold_standard": "Bảng 15 định nghĩa THA từ trước là THA có trước khi mang thai hoặc trước tuần lễ thứ 20 của thai kỳ."
+  },
+  {
+    "id": "55",
+    "category": "medical_query",
+    "question": "Theo điều tra dịch tễ học quốc gia 2001-2008, tỷ lệ mắc tăng huyết áp ở người trưởng thành Việt Nam là bao nhiêu?",
+    "expected_keywords": [
+      "25,1%",
+      "25 tuổi",
+      "một nửa không biết"
+    ],
+    "gold_standard": "Theo cuộc điều tra dịch tễ học quốc gia (2001-2008) tiến hành trên người >= 25 tuổi, tỷ lệ mắc tăng huyết áp là 25,1%.[cite: 2]"
+  },
+  {
+    "id": "56",
+    "category": "medical_query",
+    "question": "Huyết áp bình thường theo khuyến cáo 2022 của phân hội Tăng huyết áp Việt Nam là bao nhiêu?",
+    "expected_keywords": [
+      "< 130",
+      "< 85"
+    ],
+    "gold_standard": "Huyết áp được xem là bình thường khi huyết áp tâm thu < 130 mmHg và huyết áp tâm trương < 85 mmHg.[cite: 2]"
+  },
+  {
+    "id": "57",
+    "category": "medical_query",
+    "question": "Chỉ số nào được phân loại là tăng huyết áp độ 2?",
+    "expected_keywords": [
+      ">= 160",
+      ">= 100"
+    ],
+    "gold_standard": "Tăng huyết áp độ 2 là khi huyết áp tâm thu >= 160 mmHg và/hoặc huyết áp tâm trương >= 100 mmHg.[cite: 2]"
+  },
+  {
+    "id": "58",
+    "category": "medical_query",
+    "question": "Thế nào là tăng huyết áp áo choàng trắng?",
+    "expected_keywords": [
+      "phòng khám",
+      "tại nhà",
+      "bình thường"
+    ],
+    "gold_standard": "Tăng huyết áp áo choàng trắng được chẩn đoán khi có tăng huyết áp tại phòng khám nhưng huyết áp liên tục hoặc đo tại nhà lại bình thường.[cite: 2]"
+  },
+  {
+    "id": "59",
+    "category": "medical_query",
+    "question": "Loại máy đo huyết áp nào không được khuyến cáo dùng tại nhà do nguy hiểm cho trẻ nhỏ?",
+    "expected_keywords": [
+      "thủy ngân",
+      "phức tạp"
+    ],
+    "gold_standard": "Máy đo thủy ngân không được khuyến cáo sử dụng tại nhà vì tính phức tạp, không có sẵn và có thể gây nguy hiểm cho trẻ nhỏ.[cite: 2]"
+  },
+  {
+    "id": "60",
+    "category": "medical_query",
+    "question": "Bệnh nhân cần tránh làm gì 30 phút trước khi đo huyết áp tại nhà?",
+    "expected_keywords": [
+      "hút thuốc",
+      "ăn",
+      "cafein",
+      "tập thể dục"
+    ],
+    "gold_standard": "Bệnh nhân không được hút thuốc, không ăn, không sử dụng đồ uống có chứa cafein hoặc tập thể dục trong 30 phút trước khi đo huyết áp.[cite: 2]"
+  },
+  {
+    "id": "61",
+    "category": "medical_query",
+    "question": "Kết quả đo huyết áp tại nhà trong ngày đầu tiên nên được xử lý thế nào?",
+    "expected_keywords": [
+      "không lấy",
+      "ngày đầu tiên"
+    ],
+    "gold_standard": "Theo khuyến cáo, không nên lấy kết quả đo huyết áp tại nhà của ngày đầu tiên để đánh giá.[cite: 2]"
+  },
+  {
+    "id": "62",
+    "category": "medical_query",
+    "question": "Người bệnh từ 80 tuổi trở lên có ngưỡng điều trị tăng huyết áp tâm thu là bao nhiêu?",
+    "expected_keywords": [
+      ">= 160"
+    ],
+    "gold_standard": "Ngưỡng huyết áp tâm thu ở bệnh nhân rất già (>= 80 tuổi) cần điều trị là >= 160 mmHg, với điều kiện dung nạp tốt.[cite: 2]"
+  },
+  {
+    "id": "63",
+    "category": "medical_query",
+    "question": "Thuốc chẹn Beta có những chống chỉ định bắt buộc nào?",
+    "expected_keywords": [
+      "hen",
+      "nhịp tim chậm",
+      "bloc xoang nhĩ"
+    ],
+    "gold_standard": "Thuốc chẹn Beta chống chỉ định bắt buộc ở bệnh nhân bị hen, bloc xoang nhĩ hoặc bloc AV cao độ, và nhịp tim chậm dưới 60 lần/phút.[cite: 2]"
+  },
+  {
+    "id": "64",
+    "category": "medical_query",
+    "question": "Khi đo huyết áp tại nhà, băng quấn nên được đặt ở vị trí như thế nào?",
+    "expected_keywords": [
+      "ngang tim",
+      "trên nếp gấp",
+      "2-3 cm"
+    ],
+    "gold_standard": "Băng quấn phải bao quanh cánh tay, đặt ở vị trí ngang với tim, với bờ dưới nằm trên nếp gấp khuỷu tay khoảng 2 - 3 cm.[cite: 2]"
+  },
+  {
+    "id": "65",
+    "category": "medical_query",
+    "question": "Huyết áp mục tiêu khuyến cáo theo phương pháp đo tại nhà là dưới bao nhiêu?",
+    "expected_keywords": [
+      "< 130",
+      "< 85"
+    ],
+    "gold_standard": "Mục tiêu huyết áp khuyến cáo theo chỉ số đo tại nhà (HATN) là < 130/85 mmHg.[cite: 2]"
+  },
+  {
+    "id": "66",
+    "category": "medical_query",
+    "question": "Hoạt động thể lực nhịp điệu được khuyến cáo bao nhiêu phút mỗi tuần để giảm huyết áp?",
+    "expected_keywords": [
+      "150 phút"
+    ],
+    "gold_standard": "Khuyến cáo tập thể dục nhịp điệu (như đi bộ nhanh) ít nhất 150 phút mỗi tuần, chia ra 5-7 lần/tuần.[cite: 2]"
+  },
+  {
+    "id": "67",
+    "category": "medical_query",
+    "question": "Ngưỡng huyết áp cần điều trị thuốc ở nhóm tuổi 18-69 không có bệnh đồng mắc là bao nhiêu?",
+    "expected_keywords": [
+      ">= 140",
+      ">= 90"
+    ],
+    "gold_standard": "Đối với nhóm tuổi 18-69 không có bệnh đồng mắc, ngưỡng huyết áp cần điều trị thuốc là huyết áp tâm thu >= 140 mmHg hoặc huyết áp tâm trương >= 90 mmHg.[cite: 2]"
+  },
+  {
+    "id": "68",
+    "category": "medical_query",
+    "question": "Đích điều trị huyết áp tâm thu ở bệnh nhân từ 18-69 tuổi là bao nhiêu?",
+    "expected_keywords": [
+      "120",
+      "< 140",
+      "130"
+    ],
+    "gold_standard": "Mục tiêu ranh giới đích huyết áp tâm thu ở nhóm tuổi 18-69 là từ 120 đến < 140 mmHg, và nếu dung nạp được có thể hạ xuống 130mmHg hoặc thấp hơn.[cite: 2]"
+  },
+  {
+    "id": "69",
+    "category": "medical_query",
+    "question": "Có bao nhiêu nhóm thuốc chính được khuyến cáo trong điều trị tăng huyết áp theo VSH 2022?",
+    "expected_keywords": [
+      "năm",
+      "5 nhóm"
+    ],
+    "gold_standard": "Có năm nhóm thuốc chính được khuyến cáo bao gồm: ức chế men chuyển, chẹn thụ thể angiotensin, chẹn beta, chẹn kênh canxi, và lợi tiểu.[cite: 2]"
+  },
+  {
+    "id": "70",
+    "category": "medical_query",
+    "question": "Việc giảm 1kg cân nặng sẽ giúp hạ được khoảng bao nhiêu mmHg huyết áp tâm thu?",
+    "expected_keywords": [
+      "1 mmHg"
+    ],
+    "gold_standard": "Kỳ vọng giảm 1kg cân nặng sẽ giúp giảm khoảng 1 mmHg huyết áp tâm thu.[cite: 2]"
+  },
+  {
+    "id": "71",
+    "category": "medical_query",
+    "question": "Xử trí ra sao nếu creatinin huyết thanh tăng hơn 30% trong 4 tuần sau khi dùng thuốc ức chế RAS?",
+    "expected_keywords": [
+      "giảm liều",
+      "ngừng thuốc"
+    ],
+    "gold_standard": "Nếu creatinin tăng hơn 30% trong vòng 4 tuần sau khi dùng hoặc tăng liều thuốc ức chế RAS, cần xem xét giảm liều hoặc ngừng thuốc ức chế RAS.[cite: 2]"
+  },
+  {
+    "id": "72",
+    "category": "medical_query",
+    "question": "Tăng huyết áp kháng trị được định nghĩa như thế nào?",
+    "expected_keywords": [
+      "liều tối ưu",
+      "3 loại thuốc",
+      "lợi tiểu",
+      "không giảm"
+    ],
+    "gold_standard": "Tăng huyết áp kháng trị là khi đã dùng liều tối ưu của 3 loại thuốc phối hợp (có bao gồm lợi tiểu) nhưng huyết áp vẫn không giảm xuống <140/90 mmHg.[cite: 2]"
+  },
+  {
+    "id": "73",
+    "category": "medical_query",
+    "question": "Mục tiêu giảm lượng Natri trong khẩu phần ăn hàng ngày của người tăng huyết áp là bao nhiêu?",
+    "expected_keywords": [
+      "<1500 mg",
+      "Natri"
+    ],
+    "gold_standard": "Mục tiêu tối ưu là giảm lượng Natri trong khẩu phần ăn hằng ngày xuống dưới 1500 mg.[cite: 2]"
+  },
+  {
+    "id": "74",
+    "category": "medical_query",
+    "question": "Có nên phối hợp hai loại thuốc thuộc nhóm ức chế hệ Renin-Angiotensin (ví dụ UCMC và CTTA) với nhau không?",
+    "expected_keywords": [
+      "không được khuyến cáo"
+    ],
+    "gold_standard": "Việc phối hợp hai nhóm thuốc ức chế hệ renin angiotensin (RAS) không được khuyến cáo.[cite: 2]"
+  },
+  {
+    "id": "75",
+    "category": "medical_query",
+    "question": "Đối với bệnh nhân tăng huyết áp có suy tim với EF giảm, những nhóm thuốc nào được ưu tiên?",
+    "expected_keywords": [
+      "ƯCMC",
+      "CTTA",
+      "chẹn beta",
+      "SGLT2i",
+      "kháng aldosterone"
+    ],
+    "gold_standard": "Khuyến cáo dùng ƯCMC hoặc CTTA/ARNI kết hợp với chẹn beta, lợi tiểu/kháng aldosterone và thuốc SGLT2i để giảm tử vong và nhập viện.[cite: 2]"
+  },
+  {
+    "id": "76",
+    "category": "medical_query",
+    "question": "Mục tiêu huyết áp tâm thu ở bệnh nhân mắc bệnh mạch vành trong độ tuổi 18 - 69 là bao nhiêu?",
+    "expected_keywords": [
+      "120",
+      "<130"
+    ],
+    "gold_standard": "Mục tiêu điều trị huyết áp tâm thu ở bệnh nhân có bệnh mạch vành (18-69 tuổi) nằm trong ranh giới từ 120 đến < 130 mmHg.[cite: 2]"
+  },
+  {
+    "id": "77",
+    "category": "medical_query",
+    "question": "Ngưỡng huyết áp phòng khám cần điều trị ở bệnh nhân đái tháo đường týp 2 là bao nhiêu?",
+    "expected_keywords": [
+      ">= 130/85"
+    ],
+    "gold_standard": "Ngưỡng huyết áp phòng khám cần điều trị ở bệnh nhân tăng huyết áp kèm đái tháo đường týp 2 là >= 130/85 mmHg.[cite: 2]"
+  },
+  {
+    "id": "78",
+    "category": "medical_query",
+    "question": "Mục tiêu huyết áp phòng khám ở bệnh nhân tăng huyết áp kèm bệnh thận mạn là bao nhiêu?",
+    "expected_keywords": [
+      "120 - <130",
+      "70 - 79"
+    ],
+    "gold_standard": "Huyết áp phòng khám mục tiêu được khuyến cáo ở bệnh nhân bệnh thận mạn là 120 - < 130 / 70 - 79 mmHg, có thể thấp hơn nếu dung nạp tốt.[cite: 2]"
+  },
+  {
+    "id": "79",
+    "category": "medical_query",
+    "question": "Sau phẫu thuật ghép thận, huyết áp nên được duy trì ở mức dưới bao nhiêu?",
+    "expected_keywords": [
+      "< 130/80"
+    ],
+    "gold_standard": "Sau ghép thận, mục tiêu huyết áp nên được duy trì ở mức < 130/80 mmHg.[cite: 2]"
+  },
+  {
+    "id": "80",
+    "category": "medical_query",
+    "question": "Sử dụng thuốc gì để dự phòng tiền sản giật ở phụ nữ mang thai?",
+    "expected_keywords": [
+      "Aspirin",
+      "canxi"
+    ],
+    "gold_standard": "Khuyến cáo dùng 75 - 162 mg Aspirin vào tuần 12 - 36 và bổ sung canxi đường uống 1.5 - 2 g/ngày.[cite: 2]"
+  },
+  {
+    "id": "81",
+    "category": "medical_query",
+    "question": "Thuốc hạ áp nào thường được dùng đường tĩnh mạch để điều trị tăng huyết áp nặng trong thai kỳ?",
+    "expected_keywords": [
+      "Labetalol",
+      "Nicardipine",
+      "Esmolol"
+    ],
+    "gold_standard": "Điều trị tăng huyết áp nặng trong thai kỳ thường dùng Labetalol đường tĩnh mạch, hoặc thay thế bằng Nicardipine, Esmolol, Hydralazine, Urapidil.[cite: 2]"
+  },
+  {
+    "id": "82",
+    "category": "medical_query",
+    "question": "Mức hạ huyết áp an toàn cho bệnh nhân đột quỵ thiếu máu cục bộ cấp có HATT >220 mmHg (không tiêu sợi huyết) là bao nhiêu?",
+    "expected_keywords": [
+      "< 15%",
+      "24 giờ"
+    ],
+    "gold_standard": "Hạ huyết áp cẩn trọng với mức giảm < 15% huyết áp tâm thu trong 24 giờ đầu là hợp lý và an toàn.[cite: 2]"
+  },
+  {
+    "id": "83",
+    "category": "medical_query",
+    "question": "Bệnh nhân đột quỵ thiếu máu cục bộ cấp đang truyền Alteplase (tiêu sợi huyết) cần duy trì huyết áp dưới mức nào?",
+    "expected_keywords": [
+      "< 180/110",
+      "< 180/105"
+    ],
+    "gold_standard": "Cần duy trì huyết áp < 180/110 mmHg trước bolus và < 180/105 mmHg sau bolus và trong vòng 24 giờ sau truyền Alteplase.[cite: 2]"
+  },
+  {
+    "id": "84",
+    "category": "medical_query",
+    "question": "Tình trạng sản giật khác với tiền sản giật ở những biểu hiện nào?",
+    "expected_keywords": [
+      "co giật",
+      "đau đầu",
+      "thị giác"
+    ],
+    "gold_standard": "Sản giật là tăng huyết áp trong thai kỳ kèm theo các biểu hiện co giật, đau đầu dữ dội, rối loạn thị giác, hoặc đau bụng.[cite: 2]"
+  },
+  {
+    "id": "85",
+    "category": "medical_query",
+    "question": "Sau khi bắt đầu điều trị hạ huyết áp, khoảng thời gian tái khám định kỳ được khuyến cáo là bao lâu?",
+    "expected_keywords": [
+      "2-4 tuần",
+      "2-3 tháng"
+    ],
+    "gold_standard": "Khuyến cáo tái khám định kỳ mỗi 2-4 tuần/lần trong 2-3 tháng đầu để đánh giá tác dụng và kiểm soát các tác dụng phụ.[cite: 2]"
+  },
+  {
+    "id": "86",
+    "category": "medical_query",
+    "question": "Tăng huyết áp khẩn trương (urgent) khác với tăng huyết áp cấp cứu (emergency) ở điểm nào?",
+    "expected_keywords": [
+      "không có tổn thương",
+      "cơ quan đích"
+    ],
+    "gold_standard": "Tăng huyết áp khẩn trương là tình trạng huyết áp tăng đáng kể nhưng không kèm theo tổn thương cơ quan đích cấp tính.[cite: 2]"
+  },
+  {
+    "id": "87",
+    "category": "medical_query",
+    "question": "Đích điều trị ngay lập tức cho bệnh nhân tăng huyết áp kèm phù phổi cấp do tim là bao nhiêu?",
+    "expected_keywords": [
+      "< 140",
+      "ngay lập tức"
+    ],
+    "gold_standard": "Mục tiêu hạ huyết áp ngay lập tức cho phù phổi cấp do tim là đạt huyết áp tâm thu < 140 mmHg.[cite: 2]"
+  },
+  {
+    "id": "88",
+    "category": "medical_query",
+    "question": "Mục tiêu lượng Kali khuyến cáo bổ sung trong khẩu phần ăn hàng ngày để hỗ trợ giảm huyết áp là bao nhiêu?",
+    "expected_keywords": [
+      "3500",
+      "5000",
+      "mg/ngày",
+      "Kali"
+    ],
+    "gold_standard": "Mục tiêu tối ưu là tăng lượng Kali trong khẩu phần ăn hằng ngày đạt mức từ 3500-5000 mg/ngày.[cite: 2]"
+  },
+  {
+    "id": "89",
+    "category": "medical_query",
+    "question": "Chế độ ăn uống nào được nghiên cứu và chứng minh là tốt nhất để giảm huyết áp?",
+    "expected_keywords": [
+      "DASH",
+      "chế độ ăn",
+      "tốt nhất"
+    ],
+    "gold_standard": "DASH là chế độ ăn uống tốt nhất để giảm huyết áp đã được nghiên cứu và chứng minh.[cite: 2]"
+  }
+]
