@@ -1,0 +1,197 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow_password
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+
+  # song Qdrant. Xem src/core/graph_store.py.
+  memgraph:
+    image: memgraph/memgraph-mage:latest
+    ports:
+      - "7687:7687"
+    volumes:
+      - memgraph_data:/var/lib/memgraph
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'RETURN 1;' | mgconsole || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  memgraph-lab:
+    image: memgraph/lab:latest
+    ports:
+      - "3000:3000"
+    environment:
+      QUICK_CONNECT_MG_HOST: memgraph
+      QUICK_CONNECT_MG_PORT: 7687
+    depends_on:
+      - memgraph
+
+  airflow-init:
+    build: .
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --password admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com || true
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow_password@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__SECRET_KEY=my_secret_key_12345
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./data:/opt/airflow/data
+     
+  airflow-webserver:
+    build: .
+    command: webserver
+    hostname: airflow-webserver
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+      memgraph:
+        condition: service_healthy
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow_password@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__SECRET_KEY=my_secret_key_12345
+      - QDRANT_URL=http://qdrant:6333
+      - MEMGRAPH_URL=bolt://memgraph:7687
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      #- OPENAI_API_KEY=${OPENAI_API_KEY}
+      - HF_HOME=/opt/airflow/hf_cache
+      - LLAMA_CLOUD_API_KEY=${LLAMA_CLOUD_API_KEY}
+      - PYTHONPATH=/opt/airflow
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./data:/opt/airflow/data
+      - airflow_logs:/opt/airflow/logs
+      - hf_cache:/opt/airflow/hf_cache
+
+  airflow-scheduler:
+    build: .
+    command: scheduler
+    hostname: airflow-scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+      memgraph:
+        condition: service_healthy
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow_password@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__SECRET_KEY=my_secret_key_12345
+      - QDRANT_URL=http://qdrant:6333
+      - MEMGRAPH_URL=bolt://memgraph:7687
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      #- OPENAI_API_KEY=${OPENAI_API_KEY}
+      - HF_HOME=/opt/airflow/hf_cache
+      - LLAMA_CLOUD_API_KEY=${LLAMA_CLOUD_API_KEY}
+      - PYTHONPATH=/opt/airflow
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./data:/opt/airflow/data
+      - airflow_logs:/opt/airflow/logs
+      - hf_cache:/opt/airflow/hf_cache
+
+  benchmark:
+    build: .
+    entrypoint: ["python"]
+    command: ["benchmark/benchmark_runner.py"]
+    working_dir: /opt/airflow
+    profiles: ["manual"]
+    depends_on:
+      - qdrant
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - HF_HOME=/opt/airflow/hf_cache
+      
+    volumes:
+      - ./src:/opt/airflow/src
+      - ./benchmark:/opt/airflow/benchmark
+      - ./data:/opt/airflow/data
+      - hf_cache:/opt/airflow/hf_cache
+     
+  backend:
+    build: .
+    command: ["python", "run_backend.py"]
+    ports:
+      - "8000:8000"
+    depends_on:
+      - qdrant
+      - memgraph
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+      - MEMGRAPH_URL=bolt://memgraph:7687
+      - GROQ_API_KEY=${GROQ_API_KEY}
+     # - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - HF_HOME=/opt/airflow/hf_cache
+      - LLAMA_CLOUD_API_KEY=${LLAMA_CLOUD_API_KEY}
+    volumes:
+      - ./src:/opt/airflow/src
+      - ./run_backend.py:/opt/airflow/run_backend.py
+      - hf_cache:/opt/airflow/hf_cache
+    working_dir: /opt/airflow
+
+  frontend:
+    build: .
+    command: ["python", "run_frontend.py"]
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8000/api/v1/chat
+    volumes:
+      - ./src:/opt/airflow/src
+      - ./run_frontend.py:/opt/airflow/run_frontend.py
+    working_dir: /opt/airflow
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  memgraph_data:
+  airflow_logs:
+  hf_cache:

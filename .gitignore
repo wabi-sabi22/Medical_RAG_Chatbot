@@ -1,0 +1,22 @@
+# Environments
+env/
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+logs/
+airflow_logs/
+
+# Data and Cache
+qdrant_data/
+postgres_data/
+memgraph_data/
+hf_cache/
+
+# Benchmark
+benchmark/*.json

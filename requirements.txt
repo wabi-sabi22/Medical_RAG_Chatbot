@@ -1,0 +1,47 @@
+# --- Web & API Deployment ---
+fastapi>=0.100.0
+uvicorn>=0.22.0
+pydantic<2.0.0  
+# --- Vector Database & AI Client ---
+# >=1.10.0 để dùng Query API (prefetch + FusionQuery/RRF) cho hybrid dense+BM25
+qdrant-client>=1.10.0
+groq>=0.9.0
+
+# --- Sparse BM25 (hybrid retrieval, xem embedder.py FIX BM25) ---
+fastembed>=0.3.0
+
+# --- Agentic AI & RAG Orchestration ---
+langgraph>=0.0.10
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# --- PDF Processing (LlamaParse) ---
+llama-parse==0.4.2
+llama-index-core  # Bổ sung để fix lỗi thư viện lõi của LlamaParse
+nest-asyncio==1.6.0
+Pillow>=9.5.0
+
+# --- Math, NLP & Utilities ---
+numpy>=1.24.0
+python-dotenv>=1.0.0
+diskcache
+
+# --- Embedding / NLP models (CPU) ---
+sentence-transformers
+transformers
+torch
+
+# ── NER tiếng Việt (intent + entity extraction) ────────────────────────────
+underthesea
+
+# --- UI & API Requests ---
+gradio
+requests
+
+# --- Graph Database ---
+neo4j==5.14.1
+
+# ==========================================================================
+# CÁC THƯ VIỆN ĐÃ ĐƯỢC LOẠI BỎ ĐỂ TỐI ƯU HỆ THỐNG:
+# pymupdf>=1.22.0 (Đã thay thế hoàn toàn bằng llama-parse)
+# openai>=1.0.0 (Đã chuyển sang dùng Groq LLM)

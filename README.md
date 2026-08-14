@@ -1,0 +1,57 @@
+# Medical RAG Chatbot
+
+## Giới thiệu
+Medical RAG Chatbot là một hệ thống hỏi đáp y tế tự động áp dụng phương pháp Retrieval-Augmented Generation (RAG). Dự án kết hợp cơ sở dữ liệu vector (Qdrant) và cơ sở dữ liệu đồ thị (Memgraph) để tra cứu thông tin y tế một cách chính xác. Ngoài ra, dự án sử dụng Apache Airflow để điều phối và quản lý các luồng xử lý dữ liệu.
+
+## Cấu trúc thư mục
+```
+medical_rag_project/
+├── benchmark/        # Chứa mã nguồn và báo cáo đánh giá (đã loại trừ các file dữ liệu test JSON)
+├── dags/             # Các DAG của Apache Airflow quản lý luồng công việc
+├── data/             # Thư mục chứa dữ liệu đầu vào
+├── src/              # Mã nguồn chính của dự án (backend, cấu hình, xử lý RAG)
+├── docker-compose.yml# File cấu hình triển khai hệ thống bằng Docker
+├── Dockerfile        # File build image cho các dịch vụ
+├── requirements.txt  # Danh sách thư viện Python
+├── run_backend.py    # Script khởi chạy API Backend
+└── run_frontend.py   # Script khởi chạy giao diện Chatbot (Frontend)
+```
+
+## Hướng dẫn cài đặt và sử dụng (bằng Docker)
+
+Dự án này được đóng gói hoàn toàn bằng Docker, giúp việc triển khai trở nên đồng bộ và dễ dàng.
+
+### 1. Yêu cầu hệ thống
+- Đã cài đặt **Docker** và **Docker Compose**.
+- Đảm bảo bạn có sẵn file `.env` tại thư mục gốc với các khóa API cần thiết (ví dụ: `GROQ_API_KEY`, `LLAMA_CLOUD_API_KEY`...).
+
+### 2. Khởi chạy hệ thống
+Mở terminal tại thư mục gốc của dự án (`medical_rag_project`) và chạy lệnh sau để tải, build và khởi động toàn bộ các dịch vụ:
+
+```bash
+docker-compose up -d --build
+```
+
+Sau khi quá trình khởi động hoàn tất, bạn có thể truy cập các dịch vụ qua các đường dẫn sau:
+- **Frontend (Giao diện Chatbot):** [http://localhost:7860](http://localhost:7860)
+- **Backend (API):** [http://localhost:8000](http://localhost:8000)
+- **Airflow Webserver:** [http://localhost:8080](http://localhost:8080) *(Tài khoản mặc định: admin / admin)*
+- **Qdrant (Vector DB):** `localhost:6333`
+- **Memgraph-lab:** [http://localhost:3000](http://localhost:3000)
+
+### 3. Theo dõi log và kiểm tra
+Để xem log của các dịch vụ đang chạy ngầm, sử dụng lệnh:
+```bash
+docker-compose logs -f
+```
+
+### 4. Dừng hệ thống
+Để dừng và tắt toàn bộ các container của hệ thống, chạy lệnh sau:
+```bash
+docker-compose down
+```
+
+---
+**Ghi chú quan trọng:** Ngừng hỗ trợ Llama 3.1 8B Instant và sẽ loại bỏ nó vào ngày 16 tháng 8 năm 2026. Sau ngày loại bỏ, các yêu cầu đến mô hình này sẽ không còn được xử lý nữa. 
+
+Khuyến khích bạn chuyển đổi khối lượng công việc của mình sang mô hình thay thế được đề xuất của chúng tôi, GPT OSS 20B.
