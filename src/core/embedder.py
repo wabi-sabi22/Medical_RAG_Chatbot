@@ -21,7 +21,6 @@ from src.config import settings
 from src.core.graph_store import upsert_structured_ref, ensure_indexes
 
 # =========================================================================
-# FIX BM25 (root-cause "truy xuất miss tên thuốc/viết tắt/liều lượng"):
 # Trước đây collection chỉ có 1 vector "dense" (MiniLM 384d). Dense giỏi bắt
 # ngữ nghĩa chung nhưng yếu với term match chính xác — tên thuốc riêng
 # (Perindopril, Amlodipine...), viết tắt y khoa (ƯCMC, CTTA, HATT...), số
