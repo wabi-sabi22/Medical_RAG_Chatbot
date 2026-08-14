@@ -47,9 +47,17 @@ Thư mục này chứa các kịch bản đánh giá (benchmark) hiệu suất m
 Dự án này được đóng gói hoàn toàn bằng Docker, giúp việc triển khai trở nên đồng bộ và dễ dàng.
 
 ### 1. Yêu cầu hệ thống
+- Đã cài đặt **Git**.
 - Đã cài đặt **Docker** và **Docker Compose**.
 
-### 2. Thiết lập biến môi trường (.env)
+### 2. Tải mã nguồn về máy
+Mở terminal và chạy lệnh sau để tải dự án từ GitHub và di chuyển vào thư mục dự án:
+```bash
+git clone https://github.com/wabi-sabi22/Medical_RAG_Chatbot.git
+cd Medical_RAG_Chatbot
+```
+
+### 3. Thiết lập biến môi trường (.env)
 Dự án yêu cầu một số API Key để hoạt động. Bạn hãy copy file `.env.sample` đổi tên thành `.env` và điền các khóa bảo mật sau:
 - **HF_TOKEN (Hugging Face Token):** Đăng nhập vào [Hugging Face](https://huggingface.co/), truy cập mục *Settings > Access Tokens* và tạo một token mới (quyền Read).
 - **GROQ_API_KEY:** Tạo khóa API tại [Groq Console](https://console.groq.com/keys).
@@ -57,8 +65,8 @@ Dự án yêu cầu một số API Key để hoạt động. Bạn hãy copy fil
 
 *(Qdrant DB và Memgraph đã được cấu hình chạy nội bộ trong Docker nên không cần thiết lập API Key)*
 
-### 3. Khởi chạy hệ thống
-Mở terminal tại thư mục gốc của dự án (`medical_rag_project`) và chạy lệnh sau để tải, build và khởi động toàn bộ các dịch vụ:
+### 4. Khởi chạy hệ thống
+Tại thư mục gốc của dự án (`Medical_RAG_Chatbot`), chạy lệnh sau để tải, build và khởi động toàn bộ các dịch vụ:
 
 ```bash
 docker-compose up -d --build
