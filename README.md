@@ -3,6 +3,11 @@
 ## Giới thiệu
 Medical RAG Chatbot là một hệ thống hỏi đáp y tế tự động áp dụng phương pháp Retrieval-Augmented Generation (RAG). Dự án kết hợp cơ sở dữ liệu vector (Qdrant) và cơ sở dữ liệu đồ thị (Memgraph) để tra cứu thông tin y tế một cách chính xác. Ngoài ra, dự án sử dụng Apache Airflow để điều phối và quản lý các luồng xử lý dữ liệu.
 
+### Kiến trúc tổng quan
+![Kiến trúc tổng quan](medical_rag_architecture_overview.png)
+
+*Lưu ý: Qdrant DB và Memgraph được cấu hình chạy hoàn toàn ở môi trường local bên trong Docker, nên bạn không cần phải cung cấp API Key cho hai dịch vụ này.*
+
 ## Cấu trúc thư mục
 ```
 medical_rag_project/
