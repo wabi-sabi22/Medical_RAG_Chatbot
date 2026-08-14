@@ -28,6 +28,13 @@ medical_rag_project/
 └── run_frontend.py   # Script khởi chạy giao diện Chatbot UI (chạy trên port 7860)
 ```
 
+### Chi tiết thư mục `data/`
+Thư mục `data/` là nơi lưu trữ tài liệu gốc và lịch sử nạp dữ liệu (ingestion) của hệ thống:
+- **`.llamaparse_cache/`**: Thư mục bộ nhớ đệm (cache) lưu tạm kết quả trích xuất từ LlamaParse để tối ưu tốc độ và chi phí gọi API.
+- **`.ingest_cache.json`**: File ghi nhận danh sách tài liệu đã được vector hóa (embedding) thành công để tránh nạp trùng lặp.
+- **Các file `manifest_*.json`**: "Biên bản" nạp dữ liệu tự động sinh ra bởi Apache Airflow, theo dõi lịch sử và trạng thái của các đợt nạp tài liệu tự động (`scheduled`) hoặc thủ công (`manual`).
+- **Tài liệu y khoa (PDF/Word/TXT)**: Nơi chứa trực tiếp các sách, phác đồ y khoa chờ Airflow quét và nạp tự động vào hệ thống cơ sở dữ liệu.
+
 ## Hướng dẫn cài đặt và sử dụng (bằng Docker)
 
 Dự án này được đóng gói hoàn toàn bằng Docker, giúp việc triển khai trở nên đồng bộ và dễ dàng.
